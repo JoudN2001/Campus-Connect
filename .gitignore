@@ -1,0 +1,68 @@
+# ----------------------------------------------------------------------
+# Environment Variables & Secrets
+# ----------------------------------------------------------------------
+# CRUCIAL: Never commit your database credentials or API keys!
+# Store your MySQL connection details in a .env file.
+.env
+.env.*
+*.ini
+
+# ----------------------------------------------------------------------
+# VS Code & IDEs
+# ----------------------------------------------------------------------
+.vscode/*
+# (Optional) Allow specific VS Code settings if you want to share workspace settings with your group
+!.vscode/settings.json 
+!.vscode/extensions.json
+
+# Other IDEs
+.idea/
+*.swp
+*.swo
+
+# ----------------------------------------------------------------------
+# OS Generated Files
+# ----------------------------------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----------------------------------------------------------------------
+# Logs & Caches
+# ----------------------------------------------------------------------
+*.log
+error_log
+php_errors.log
+
+# ----------------------------------------------------------------------
+# Databases
+# ----------------------------------------------------------------------
+# Ignore large database dumps or local SQLite files if you test with them
+*.sqlite
+*.sqlite3
+*.db
+# Note: Since your project deliverables require an "SQL file for creating and populating tables", make sure you DO NOT ignore your main deliverable file (e.g., database.sql).
+
+# ----------------------------------------------------------------------
+# File Uploads (Optional)
+# ----------------------------------------------------------------------
+# If your PHP backend allows users or admins to upload images (like product thumbnails), 
+# you usually want to ignore the uploaded files so they don't bloat your Git repository.
+# uploads/
+# images/products/*
+# !images/products/placeholder.png
+
+# ----------------------------------------------------------------------
+# Dependencies (Future-proofing)
+# ----------------------------------------------------------------------
+# In case you decide to use Composer for PHP packages or NPM for frontend tools later
+vendor/
+node_modules/
