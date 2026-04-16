@@ -1,100 +1,142 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../stylesheet/normaliz.css" />
     <link rel="stylesheet" href="../stylesheet/styles.css" />
     <title>Contacts</title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle"
+    />
+  </head>
 
-<body>
-    
+  <body>
     <header>
-        <h1>Campus<span>Connect <span></h1>
-        <!-- NAVBAR -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="./home-page.html">Home</a> </li>
-                <li><a href="./events-page.html">Events</a></li>
-                <li><a href="./registration-page.html">Registration</a></li>
-                <li><a href="./contact-page.html">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- ===== NAVBAR ===== -->
+      <a href="./home-page.html">
+        <h1>Campus<span>Connect </span></h1>
+      </a>
+      <!-- NAVBAR -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./home-page.html">Home</a></li>
+          <li><a href="./events-page.html">Events</a></li>
+          <li><a href="./registration-page.html">Registration</a></li>
+          <li><a href="./contact-page.html">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div>
-            <a href="./registration-page.html">Sign In</a>
-            <button>☰</button>
-        </div>
+      <div>
+        <button><a href="./registration-page.html"> Sign In </a></button>
+        <button>
+          <a href="./registration-page.html">
+            <span class="material-symbols-outlined"> account_circle </span>
+          </a>
+        </button>
+      </div>
+
+      <!-- ===== NAVBAR ===== -->
     </header>
 
     <div>
-        <h1>Let's Connect.</h1>
-        <p> If you have any questions or would like to get in touch, please feel free to reach out to us using the form
-            below.</p>
-        <!-- TODO: IMAGE BACKGROUND WITH GRADIANT -->
+      <h1>Let's Connect.</h1>
+      <p>
+        If you have any questions or would like to get in touch, please feel
+        free to reach out to us using the form below.
+      </p>
+      <!-- TODO: IMAGE BACKGROUND WITH GRADIANT -->
     </div>
     <!-- FORM + INFO -->
     <div>
+      <div>
         <div>
-            <div>
-                <h3> Send us a Message </h3>
-                <p> Our team will get back to you as soon as possible. </p>
-            </div>
-
-            <form>
-                <label> Full Name </label> <input type="text"> <br> <br>
-                <label> Email </label> <input type="email"> <br> <br>
-                <lable> Subject </lable> <input type="text"> <br> <br>
-                <!--TODO: The subject section is a text input or select? -->
-                <label> Message </label> <textarea></textarea> <br> <br>
-                <button type="submit"> Send Message </button> <br> <br>
-                <button type="reset"> Clear Form </button>
-            </form>
+          <h3>Send us a Message</h3>
+          <p>Our team will get back to you as soon as possible.</p>
         </div>
+        <!-- FORM -->
+        <form>
+          <label for="full-name"> Full Name </label>
+          <input type="text" id="full-name" />
+          <label for="email"> Email </label> <input type="email" id="email" />
+
+          <lable for="subject"> Subject </lable>
+          <select id="subject">
+            <option selected value="general">General Inquiry</option>
+            <option value="events">Events</option>
+            <option value="registration">Registration</option>
+            <option value="Recommendation">Recommendation</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message"> Message </label>
+          <textarea id="message"></textarea>
+
+          <button type="submit">Send Message</button>
+
+          <button type="reset">Clear Form</button>
+        </form>
+        <!-- ===== FORM =====  -->>
+      </div>
+      <div>
         <div>
-            <div>
-                <h3> Get in Touch </h3>
-            </div>
-
-            <div>
-                <!-- TODO: ADD ICON -->
-                <h4> University Address </h4>
-                <p> Jordan , Amman </p>
-            </div>
-
-            <div>
-                <h3> Phone Number </h3>
-                <p> <a href="tel:+962782939517">+962 782 939 517</a> </p>
-            </div>
-            <div>
-                <h3> Email </h3>
-                <p> <a href="mailto:3230606068@wise.edu.jo">3230606068@wise.edu.jo</a> </p>
-            </div>
-
-           <!-- TODO: ADD Contact with us icons  -->
+          <h3>Get in Touch</h3>
         </div>
+
+        <div>
+          <!-- TODO: ADD ICON -->
+          <h4>University Address</h4>
+          <p>Jordan , Amman</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.1074959504494!2d35.931493275327135!3d32.01220172267868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b6037d70a02f5%3A0x422b60b0d9a86253!2sThe%20World%20Islamic%20Sciences%20and%20Education%20University!5e0!3m2!1sen!2sjo!4v1776351798619!5m2!1sen!2sjo"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <!-- Address -->
+        <address>
+          <div>
+            <h3>Phone Number</h3>
+            <p><a href="tel:+962782939517">+962 782 939 517</a></p>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:3230606068@wise.edu.jo">3230606068@wise.edu.jo</a>
+            </p>
+          </div>
+        </address>
+        <!-- ====== Address ====== -->
+
+        <!-- TODO: ADD Contact with us icons  -->
+      </div>
     </div>
     <!-- ===== FORM + INFO ===== -->
 
-
     <!--  FOOTER -->
     <footer>
-        <div class="logo">Campus<span>Connect</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Campus Map</a></li>
-                <li><a href="#">Directory</a></li>
-            </ul>
-        </nav>
+      <div class="logo">Campus<span>Connect</span></div>
+      <date>© 2024 CampusConnect. All rights reserved.</date>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Directory</a></li>
+        </ul>
+      </nav>
     </footer>
     <!-- ===== FOOTER =====  -->
-
-
-</body>
-
+  </body>
 </html>
