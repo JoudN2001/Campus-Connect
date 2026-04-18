@@ -1,0 +1,539 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+/* SIDE MENUE STYLE */
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 3rem;
+    left: 1rem;
+    z-index: 99;
+    width: 275px;
+    height: 100dvh;
+}
+
+/* HEADER */
+.side-menu .header {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.side-menu .header .title {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.side-menu .header .descreption {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--color-text);
+}
+
+/* ===== HEADER ===== */
+
+/* NAV LINKS */
+.side-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.side-menu .nav-links li {
+    list-style: none;
+}
+
+.side-menu .nav-links li .link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    gap: 1rem;
+    padding-left: 1rem;
+    user-select: none;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: all 0.5s ease-in;
+}
+
+.side-menu .nav-links li .link:hover {
+    border-right: solid 4px var(--color-primary);
+    color: var(--color-primary);
+    background-color: #3589ff1f;
+}
+
+.side-menu .nav-links li .active {
+    border-right: solid 4px var(--color-primary);
+    color: var(--color-primary);
+    background-color: #3589ff1f;
+}
+
+/* ===== NAV LINKS ===== */
+
+/* PROFILE */
+.side-menu .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    bottom: 3rem;
+    width: 100%;
+}
+
+.side-menu .profile .profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #53484846;
+    border: solid 2px var(--color-primary);
+    border-radius: 50%;
+}
+
+.side-menu .profile .profile-letter {
+    font-weight: bold;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.side-menu .profile .name-role {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.side-menu .profile .name-role .role {
+    font-size: small;
+    color: var(--color-text);
+    letter-spacing: 0.1rem;
+}
+
+/* ===== PROFILE ===== */
+
+/* ===== SIDE MENUE STYLE ===== */
+
+/* MAIN CONTENT STYLE */
+header,
+footer,
+main {
+    padding-left: 22rem;
+}
+
+header {
+    padding-top: 3rem;
+}
+
+header .title {
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* CARDS */
+main .trend-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+main .trend-cards .card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 200px;
+    height: 175px;
+    border-radius: 10%;
+    box-shadow: 1px 1px 5px 1px #0000001c;
+    background-color: var(--color-surface);
+}
+
+main .trend-cards .card .icon {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 20%;
+    margin-bottom: 1.2rem;
+    color: var(--color-text);
+}
+
+main .trend-cards .card:nth-of-type(1) .icon {
+    background-color: #D6E3FF;
+}
+
+main .trend-cards .card:nth-of-type(2) .icon {
+    background-color: #FEDA5A;
+}
+
+main .trend-cards .card:nth-of-type(3) .icon {
+    background-color: #FFDDBA;
+}
+
+main .trend-cards .card .label {
+    font-weight: 600;
+    padding-bottom: 0.2rem;
+}
+
+main .trend-cards .card .value {
+    font-size: 2.1rem;
+}
+
+/* ===== CARDS ===== */
+
+/* FEATURED EVENTS SECTION */
+
+/* HEADER OF SECTION */
+.active-events-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.active-events-label .active-title .title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.active-events-label .active-title .descreption {
+    margin-top: 0.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.active-events-label a {
+    display: flex;
+    align-items: center;
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+    padding: 1rem 1.5rem;
+    border-radius: 15rem;
+    margin-right: 2.5rem;
+    font-weight: bold;
+    gap: 0.5rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.5s ease-in;
+}
+
+.active-events-label a:hover {
+    background-color: #1a365dea;
+}
+
+/* ===== HEADER OF SECTION ===== */
+
+.highlited-events {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* MAIN EVENT  */
+.highlited-events .main-event {
+    position: relative;
+    width: 65%;
+    min-height: 420px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlited-events .main-event .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);
+    transition: all 0.3s ease-in;
+}
+
+.highlited-events .main-event:hover .bg-img {
+    filter: brightness(0.8);
+}
+
+.highlited-events .main-event .event-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem;
+    z-index: 1;
+}
+
+.highlited-events .main-event .top-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.highlited-events .main-event .status {
+    color: var(--color-text, #111);
+    padding: 0.5rem 1.2rem;
+    border-radius: 10rem;
+    background-color: #FEDA5A;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.highlited-events .main-event .event-title {
+    color: var(--color-surface, #fff);
+    font-size: 2.8rem;
+    font-weight: bolder;
+    max-width: 90%;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.highlited-events .main-event .event-info {
+    display: flex;
+    gap: 3rem;
+    margin-top: auto;
+}
+
+.highlited-events .main-event .info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.highlited-events .main-event .info-label {
+    color: #FEDA5A;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.highlited-events .main-event .detailes {
+    color: var(--color-surface, #fff);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ===== MAIN EVENT ===== */
+
+/* SELECTED EVENTS (SIDE CARDS) */
+.highlited-events .selected-events {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 35%;
+}
+
+.highlited-events .selected-events .card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: #F8F9FA;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    flex-shrink: 0;
+}
+
+.highlited-events .selected-events .card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+
+.highlited-events .selected-events .card .detailes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlited-events .selected-events .card .catagory {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #9c7b47;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.highlited-events .selected-events .card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary, #0B2447);
+    margin: 0 0 0.3rem 0;
+}
+
+.highlited-events .selected-events .card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ===== SELECTED EVENTS (SIDE CARDS) ===== */
+
+/* ===== FEATURED EVENTS SECTION ===== */
+
+/* RECENT STUDENT TABLE */
+.recent-registrations {
+    background-color: var(--color-surface);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}
+
+.recent-registrations .section-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* TABLE */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8C98A4;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    border-bottom: 2px solid #F1F4F6;
+    background-color: #F8F9FA;
+}
+
+td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #F1F4F6;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.date-text {
+    color: #6c757d;
+}
+
+.student-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.student-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.student-profile .name {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.status-badge.pending {
+    background-color: #FFF3CD;
+    color: var(--color-pending);
+}
+
+.status-badge.approved {
+    background-color: #D4EDDA;
+    color: var(--color-success);
+}
+
+.status-badge.rejected {
+    background-color: #F8D7DA;
+    color: var(--color-error);
+}
+
+.action-link {
+    color: var(--color-primary, #0B2447);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+    color: #1a365dea;
+}
+
+.view-all-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+    color: #1a365dea;
+}
+
+/* ===== TABLE ===== */
+
+
+
+/* ===== RECENT STUDENT TABLE ===== */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+footer div {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 3.6rem;
+}
+
+footer p {
+    padding-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+/* ===== MAIN CONTENT STYLE ===== */
