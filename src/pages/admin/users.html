@@ -17,7 +17,8 @@
 <body>
     <header>
         <h3>Welcome back, Admin</h3>
-        <h1 class="title">Dashboard Overview</h1>
+        <h1 class="title">User Directory</h1>
+        <p class="descreption">Manage university accounts, roles, and access.</p>
     </header>
     <!-- SIDE MENU -->
     <div class="side-menu">
@@ -48,8 +49,8 @@
                         <span>Registrations</span>
                     </a>
                 </li>
-                <li class="link" href="./users.html">
-                    <a class="link active">
+                <li>
+                    <a class="link active" href="./users.html">
                         <span class="material-symbols-outlined">group</span>
                         <span>Users</span>
                     </a>
@@ -76,7 +77,221 @@
         <!-- ===== PROFILE PHOTO ===== -->
     </div>
     <!-- ===== SIDE MENU ===== -->
+    <main>
+        <!-- SUMMARY CARDS -->
+        <section class="trend-cards">
+            <div class="card">
+                <span class="icon material-symbols-outlined">group</span>
+                <p class="label">Total Users</p>
+                <h1 class="value">1,840</h1>
+            </div>
 
+        </section>
+        <!-- ===== SUMMARY CARDS ===== -->
+        <!-- USERS TABLE -->
+        <section class="recent-registrations">
+            <!-- SEARCH + FILTERATION -->
+            <div class="search-filter">
+                <form action="">
+                    <div class="group">
+                        <span class="icon material-symbols-outlined">search</span>
+                        <input placeholder="Search by student name or ID..." type="search" class="input">
+                    </div>
+                </form>
+                <div class="filters">
+                    <button class="filter"><span class="material-symbols-outlined">filter_list</span>All Events</button>
+                    <button class="filter">Students</button>
+                    <button class="filter">Faculty</button>
+                    <button class="filter">Doctors</button>
+                </div>
+            </div>
+            <!-- ===== SEARCH + FILTERATION ===== -->
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>USER</th>
+                            <th>LAST LOGIN</th>
+                            <th>STATUS</th>
+                            <th>ROLE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=5" alt="Eleanor Vance">
+                                    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                        <span class="name">Eleanor Vance</span>
+                                        <span style="font-size: 0.8rem; color: #6c757d;">e.vance@university.edu</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                    <span style="font-weight: 600; color: #333;">2 hours ago</span>
+                                    <span style="font-size: 0.8rem; color: #8C98A4;">Web Portal</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge approved">Active</span></td>
+                            <td>
+                                <select class="role-dropdown">
+                                    <option selected>Administrator</option>
+                                    <option>Moderator</option>
+                                    <option>Faculty</option>
+                                    <option>Student</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=11" alt="Marcus Thorne">
+                                    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                        <span class="name">Marcus Thorne</span>
+                                        <span style="font-size: 0.8rem; color: #6c757d;">m.thorne@university.edu</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                    <span style="font-weight: 600; color: #333;">Yesterday</span>
+                                    <span style="font-size: 0.8rem; color: #8C98A4;">Mobile App</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge approved">Active</span></td>
+                            <td>
+                                <select class="role-dropdown">
+                                    <option>Administrator</option>
+                                    <option selected>Moderator</option>
+                                    <option>Faculty</option>
+                                    <option>Student</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=9" alt="Sarah Jenkins">
+                                    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                        <span class="name">Sarah Jenkins</span>
+                                        <span style="font-size: 0.8rem; color: #6c757d;">s.jenkins24@student.edu</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                    <span style="font-weight: 600; color: #333;">Oct 12, 2026</span>
+                                    <span style="font-size: 0.8rem; color: #8C98A4;">Web Portal</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge offline">Offline</span></td>
+                            <td>
+                                <select class="role-dropdown">
+                                    <option>Administrator</option>
+                                    <option>Moderator</option>
+                                    <option>Faculty</option>
+                                    <option selected>Student</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="Dr. Robert Chen">
+                                    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                        <span class="name">Dr. Robert Chen</span>
+                                        <span style="font-size: 0.8rem; color: #6c757d;">r.chen@faculty.edu</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                    <span style="font-weight: 600; color: #333;">Oct 10, 2026</span>
+                                    <span style="font-size: 0.8rem; color: #8C98A4;">Web Portal</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge approved">Active</span></td>
+                            <td>
+                                <select class="role-dropdown">
+                                    <option>Administrator</option>
+                                    <option>Moderator</option>
+                                    <option selected>Faculty</option>
+                                    <option>Student</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=47" alt="Lila Patel">
+                                    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                        <span class="name">Lila Patel</span>
+                                        <span style="font-size: 0.8rem; color: #6c757d;">l.patel@student.edu</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                    <span style="font-weight: 600; color: #333;">Just now</span>
+                                    <span style="font-size: 0.8rem; color: #8C98A4;">Mobile App</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge approved">Active</span></td>
+                            <td>
+                                <select class="role-dropdown">
+                                    <option>Administrator</option>
+                                    <option>Moderator</option>
+                                    <option>Faculty</option>
+                                    <option selected>Student</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=33" alt="Dr. Amanda Lewis">
+                                    <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                        <span class="name">Dr. Amanda Lewis</span>
+                                        <span style="font-size: 0.8rem; color: #6c757d;">a.lewis@faculty.edu</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                    <span style="font-weight: 600; color: #333;">3 days ago</span>
+                                    <span style="font-size: 0.8rem; color: #8C98A4;">Web Portal</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge offline">Offline</span></td>
+                            <td>
+                                <select class="role-dropdown">
+                                    <option>Administrator</option>
+                                    <option>Moderator</option>
+                                    <option selected>Faculty</option>
+                                    <option>Student</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <p>Showing 3 of 85 pending events</p>
+                    <div class="pagination">
+                        <button class="btn btn-outline">Previous</button>
+                        <button class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== USERS TABLE ===== -->
+    </main>
     <footer>
         <div>
             <h4>CampusConnect</h4>

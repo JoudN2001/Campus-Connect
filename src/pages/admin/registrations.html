@@ -17,7 +17,9 @@
 <body>
     <header>
         <h3>Welcome back, Admin</h3>
-        <h1 class="title">Dashboard Overview</h1>
+        <h1 class="title">Registration Requests</h1>
+        <p class="descreption">Review and manage pending registrations for upcoming university events. Approvals will
+            trigger automated confirmation emails to attendees.</p>
     </header>
     <!-- SIDE MENU -->
     <div class="side-menu">
@@ -48,8 +50,8 @@
                         <span>Registrations</span>
                     </a>
                 </li>
-                <li class="link" href="./users.html">
-                    <a class="link">
+                <li>
+                    <a class="link" href="./users.html">
                         <span class="material-symbols-outlined">group</span>
                         <span>Users</span>
                     </a>
@@ -77,6 +79,177 @@
     </div>
     <!-- ===== SIDE MENU ===== -->
 
+    <main>
+        <!-- SUMMARY CARDS -->
+        <section class="trend-cards">
+            <div class="card">
+                <span class="icon material-symbols-outlined">group</span>
+                <p class="label">Total Registrations</p>
+                <h1 class="value">12,840</h1>
+            </div>
+            <div class="card">
+                <span class="icon material-symbols-outlined">pending_actions</span>
+                <p class="label">Pending Approvals</p>
+                <h1 class="value">158</h1>
+            </div>
+            <div class="card">
+                <span class="icon material-symbols-outlined">calendar_check</span>
+                <p class="label">Approved Today</p>
+                <h1 class="value">22</h1>
+            </div>
+        </section>
+        <!-- ===== SUMMARY CARDS ===== -->
+        <!-- REGESTRATION STUDENT TABLE -->
+        <section class="recent-registrations">
+            <!-- SEARCH + FILTERATION -->
+            <div class="search-filter">
+                <form action="">
+                    <div class="group">
+                        <span class="icon material-symbols-outlined">search</span>
+                        <input placeholder="Search by student name or ID..." type="search" class="input">
+                    </div>
+                </form>
+                <div class="filters">
+                    <button class="filter"><span class="material-symbols-outlined">filter_list</span>All Events</button>
+                    <button class="filter pending">Pending</button>
+                    <button class="filter approved">Approved</button>
+                    <button class="filter rejected">Rejected</button>
+                </div>
+            </div>
+            <!-- ===== SEARCH + FILTERATION ===== -->
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STUDENT NAME</th>
+                            <th>SELECTED EVENT</th>
+                            <th>DATE APPLIED</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="Liam Gallagher">
+                                    <span class="name">Liam Gallagher</span>
+                                </div>
+                            </td>
+                            <td>Quantum Computing Workshop</td>
+                            <td class="date-text">5 mins ago</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon approved">check</span>
+                                    <span class="material-symbols-outlined action-icon rejected">close</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=5" alt="Aisha Patel">
+                                    <span class="name">Aisha Patel</span>
+                                </div>
+                            </td>
+                            <td>Freshers' Welcome Mixer</td>
+                            <td class="date-text">15 mins ago</td>
+                            <td><span class="status-badge approved">Approved</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon approved">check</span>
+                                    <span class="material-symbols-outlined action-icon rejected">close</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=11" alt="Carlos Mendoza">
+                                    <span class="name">Carlos Mendoza</span>
+                                </div>
+                            </td>
+                            <td>Inter-College Track Meet</td>
+                            <td class="date-text">1 hour ago</td>
+                            <td><span class="status-badge rejected">Rejected</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon approved">check</span>
+                                    <span class="material-symbols-outlined action-icon rejected">close</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=3" alt="Yuki Tanaka">
+                                    <span class="name">Yuki Tanaka</span>
+                                </div>
+                            </td>
+                            <td>AI & Ethics Symposium</td>
+                            <td class="date-text">2 hours ago</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon approved">check</span>
+                                    <span class="material-symbols-outlined action-icon rejected">close</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=9" alt="Sarah Jenkins">
+                                    <span class="name">Sarah Jenkins</span>
+                                </div>
+                            </td>
+                            <td>Alumni Networking Gala</td>
+                            <td class="date-text">1 day ago</td>
+                            <td><span class="status-badge approved">Approved</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon approved">check</span>
+                                    <span class="material-symbols-outlined action-icon rejected">close</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://i.pravatar.cc/150?img=8" alt="David Osei">
+                                    <span class="name">David Osei</span>
+                                </div>
+                            </td>
+                            <td>Public Speaking Masterclass</td>
+                            <td class="date-text">2 days ago</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon approved">check</span>
+                                    <span class="material-symbols-outlined action-icon rejected">close</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <p>Showing 3 of 158 pending entries</p>
+                    <div class="pagination">
+                        <button class="btn btn-outline">Previous</button>
+                        <button class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== REGESTRATION STUDENT TABLE ===== -->
+    </main>
     <footer>
         <div>
             <h4>CampusConnect</h4>
