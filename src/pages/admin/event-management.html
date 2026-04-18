@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS EXTERNAL FILES -->
+    <link rel="stylesheet" href="/src/stylesheet/normaliz.css">
+    <link rel="stylesheet" href="/src/stylesheet/global.css">
+    <link rel="stylesheet" href="/src/stylesheet/admin-pages.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <header>
+        <h3>Welcome back, Admin</h3>
+        <h1 class="title">Event Management</h1>
+        <p class="descreption">Manage and curate upcoming university activities.</p>
+    </header>
+    <!-- SIDE MENU -->
+    <div class="side-menu">
+        <!-- HEADER -->
+        <div class="header">
+            <h2 class="title"><a href="./adim-page.html">Admin Console</a></h2>
+            <p class="descreption">UNIVERSITY EVENT PLATFORM</p>
+        </div>
+        <!-- ===== HEADER ===== -->
+        <!-- NAVIGATION LINKS -->
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a class="link" href="./dashboard.html">
+                        <span class="material-symbols-outlined"> dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link active" href="./event-management.html">
+                        <span class="material-symbols-outlined"> event </span>
+                        <span>Event Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="./registrations.html">
+                        <span class="material-symbols-outlined">how_to_reg</span>
+                        <span>Registrations</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="./users.html">
+                        <span class="material-symbols-outlined">group</span>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="./setting.html">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span>System Setting</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- ===== NAVIGATION LINKS ===== -->
+        <!-- PROFILE PHOTO -->
+        <div class="profile">
+            <div class="profile-image">
+                <span class="profile-letter">S</span>
+            </div>
+            <div class="name-role">
+                <h4 class="name">Dr. Somia Abufakher </h4>
+                <p class="role">Dean of Student</p>
+            </div>
+        </div>
+        <!-- ===== PROFILE PHOTO ===== -->
+    </div>
+    <!-- ===== SIDE MENU ===== -->
+
+    <main>
+        <!-- SUMMARY CARDS -->
+        <section class="trend-cards">
+            <div class="card">
+                <span class="icon material-symbols-outlined">event_available</span>
+                <p class="label">Active Events</p>
+                <h1 class="value">42</h1>
+            </div>
+
+        </section>
+        <!-- ===== SUMMARY CARDS ===== -->
+        <!-- EVENTS TABLE -->
+        <section class="event-management recent-registrations">
+            <div class="search-filter">
+                <form action="">
+                    <div class="group">
+                        <span class="icon material-symbols-outlined">search</span>
+                        <input placeholder="Search by event name, location, or host..." type="search" class="input">
+                    </div>
+                </form>
+                <div class="filters">
+                    <button class="filter"><span class="material-symbols-outlined">filter_list</span>All Events
+                        (42)</button>
+                    <button class="filter">Upcoming</button>
+                    <button class="filter">Active</button>
+                    <button class="filter">Completed</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EVENT DETAILS</th>
+                            <th>SCHEDULE</th>
+                            <th>ATTENDANCE</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=150&q=80"
+                                        alt="AI Symposium" class="event-thumbnail">
+                                    <div class="info-stack">
+                                        <span class="name">Global AI & Ethics Symposium</span>
+                                        <span class="sub-text">Great Hall</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">Oct 24, 2026</span>
+                                    <span class="sub-text">09:00 AM - 05:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">450 / 500</span>
+                                    <span class="sub-text">90% Full</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge pending">Upcoming</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon">edit</span>
+                                    <span class="material-symbols-outlined action-icon">visibility</span>
+                                    <span class="material-symbols-outlined action-icon rejected">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=150&q=80"
+                                        alt="Networking Gala" class="event-thumbnail">
+                                    <div class="info-stack">
+                                        <span class="name">Alumni Networking Gala</span>
+                                        <span class="sub-text">Grand Ballroom</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">Nov 02, 2026</span>
+                                    <span class="sub-text">07:00 PM - 11:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">200 / 200</span>
+                                    <span class="sub-text success-text">Sold Out</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge approved">Active</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon">edit</span>
+                                    <span class="material-symbols-outlined action-icon">visibility</span>
+                                    <span class="material-symbols-outlined action-icon rejected">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=150&q=80"
+                                        alt="Public Speaking" class="event-thumbnail">
+                                    <div class="info-stack">
+                                        <span class="name">Public Speaking Masterclass</span>
+                                        <span class="sub-text">Room 304</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">Today</span>
+                                    <span class="sub-text">02:00 PM - 04:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">45 / 50</span>
+                                    <span class="sub-text">Registration Open</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge approved">Active</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon">edit</span>
+                                    <span class="material-symbols-outlined action-icon">visibility</span>
+                                    <span class="material-symbols-outlined action-icon rejected">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=150&q=80"
+                                        alt="Track Meet" class="event-thumbnail">
+                                    <div class="info-stack">
+                                        <span class="name">Inter-College Track Meet</span>
+                                        <span class="sub-text">Main Stadium</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">Sep 15, 2026</span>
+                                    <span class="sub-text">08:00 AM - 06:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">850 / 1000</span>
+                                    <span class="sub-text">Finished</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge offline">Completed</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon">edit</span>
+                                    <span class="material-symbols-outlined action-icon">visibility</span>
+                                    <span class="material-symbols-outlined action-icon rejected">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=150&q=80"
+                                        alt="Tech Workshop" class="event-thumbnail">
+                                    <div class="info-stack">
+                                        <span class="name">Quantum Computing Intro</span>
+                                        <span class="sub-text">Science Lab B</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">Oct 20, 2026</span>
+                                    <span class="sub-text">10:00 AM - 12:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">0 / 30</span>
+                                    <span class="sub-text">Refunds Processed</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge rejected">Cancelled</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon">edit</span>
+                                    <span class="material-symbols-outlined action-icon">visibility</span>
+                                    <span class="material-symbols-outlined action-icon rejected">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-profile">
+                                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=150&q=80"
+                                        alt="Career Fair" class="event-thumbnail">
+                                    <div class="info-stack">
+                                        <span class="name">Spring Career Fair 2027</span>
+                                        <span class="sub-text">University Expo Center</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">Mar 10, 2027</span>
+                                    <span class="sub-text">10:00 AM - 04:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="info-stack">
+                                    <span class="main-text">1200 / 1500</span>
+                                    <span class="sub-text">Filling Fast</span>
+                                </div>
+                            </td>
+                            <td><span class="status-badge pending">Upcoming</span></td>
+                            <td>
+                                <div class="action-buttons icon-only">
+                                    <span class="material-symbols-outlined action-icon">edit</span>
+                                    <span class="material-symbols-outlined action-icon">visibility</span>
+                                    <span class="material-symbols-outlined action-icon rejected">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <p>Showing <strong>1</strong> to <strong>5</strong> of <strong>42</strong> events</p>
+                    <div class="pagination">
+                        <button class="btn btn-outline">Previous</button>
+                        <button class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== EVENTS TABLE ===== -->
+        <!-- ADD EVENT FORM -->
+        <form action="" class="add-event">
+            <div class="form-grid">
+
+                <div class="input-group full-width">
+                    <label class="label" for="event-title">Event Title</label>
+                    <input autocomplete="off" name="event-title" id="event-title" class="input" type="text"
+                        placeholder="e.g. Global AI & Ethics Symposium">
+                </div>
+
+                <div class="input-group full-width">
+                    <label class="label" for="event-venue">Venue / Location</label>
+                    <input autocomplete="off" name="event-venue" id="event-venue" class="input" type="text"
+                        placeholder="e.g. Great Hall">
+                </div>
+
+                <div class="input-group">
+                    <label class="label" for="event-date">Date</label>
+                    <input autocomplete="off" name="event-date" id="event-date" class="input" type="date">
+                </div>
+
+                <div class="input-group">
+                    <label class="label" for="event-capacity">Max Capacity</label>
+                    <input autocomplete="off" name="event-capacity" id="event-capacity" class="input" type="number"
+                        placeholder="e.g. 500">
+                </div>
+
+                <div class="input-group">
+                    <label class="label" for="event-start-time">Start Time</label>
+                    <input autocomplete="off" name="event-start-time" id="event-start-time" class="input" type="time">
+                </div>
+
+                <div class="input-group">
+                    <label class="label" for="event-end-time">End Time</label>
+                    <input autocomplete="off" name="event-end-time" id="event-end-time" class="input" type="time">
+                </div>
+
+                <div class="input-group full-width">
+                    <label class="label" for="event-category">Category</label>
+                    <select autocomplete="off" name="event-category" id="event-category" class="input role-dropdown">
+                        <option value="academic">Academic</option>
+                        <option value="social">Social</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+
+                <div class="input-group full-width">
+                    <label class="label" for="event-description">Description</label>
+                    <textarea autocomplete="off" name="event-description" id="event-description" class="input textarea"
+                        placeholder="Provide event details..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn-outline">Clear All</button>
+                <button type="submit" class="btn btn-primary">Save Event</button>
+            </div>
+        </form>
+        <!-- ===== ADD EVENT FORM ===== -->
+    </main>
+
+    <footer>
+        <div>
+            <h4>CampusConnect</h4>
+            <p>© 2026 CampusConnect University.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
