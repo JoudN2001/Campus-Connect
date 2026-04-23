@@ -1,13 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Event Registration | CampusConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+=======
     <link rel="stylesheet" href="../stylesheet/normaliz.css">
     <link rel="stylesheet" href="../stylesheet/styles.css">
-    <title>Document</title>
+    <title>Registration</title>
+>>>>>>> 292f8090bd95c07d094e32001a14a55eae06a999
 </head>
+
 <body>
-    
+
+    <header>
+        <h1>CampusConnect</h1>
+        <nav>
+            <ul>
+                <li><a href=" ./home-page.html">Home</a></li>
+                <li><a href="./events-page.html">Events</a></li>
+                <li><a href="./registration-page.html">Registration</a></li>
+                <li><a href="./contact-page.html">Contact</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <hr>
+    <main>
+        <!`-- Event Registration Section -->
+        <section>
+            <h2>Event Registration</h2>
+
+            <p>Fill out the form below to secure your spot at upcoming campus events.</p>
+
+            <div>
+                <h3>Registration Unsuccessf ul. Please correct the following error:</h3>
+                <ul>
+                    <li><a>University Email: Please enter a valid university email address.</a></li>
+                </ul>   
+            </div>
+
+            <form>
+
+                <fieldset>
+                    <legend>Registration Details</legend>
+
+                    <ul>
+
+                        <li>
+                            <label>Full Name</label>
+                            <br>
+                            <input type="text" id="full-name" name="full-name" required>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <label>Student ID (8 digits)</label>
+                            <br>
+                            <input type="text" id="student-id" name="student-id" pattern="[0-9]{8}" required>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <label>University Email</label> <!-- Note: for="university-email" -->
+                            <br>
+                            <input type="email" id="university-email" name="university-email" required>
+                            
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <label>Event Selection</label>
+                            <br>
+                            <select>
+                                <option>Annual Alumni Mixer</option>
+                                <option>Tech Innovation Symposium</option>
+                                <option>Fall Career Fair</option>
+                                <option>Contemporary Art Gala</option>
+                                <option>Varsity Sports Day</option>
+                            </select>
+                            
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <label>Additional Comments</label>
+                            <br>
+                            <textarea >
+                            </textarea>
+                        </li>
+
+                    </ul>
+                </fieldset>
+
+                <br>
+
+                <button >Submit Registration</button>
+                <button >Reset Form</button>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+<! -- Footer with copyright and navigation links -->
+    <footer>
+        <p>&copy; 2026 CampusConnect University. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Campus Map</a></li>
+                <li><a href="#">Directory</a></li>
+            </ul>
+        </nav>
+    </footer>
+
 </body>
+
 </html>
