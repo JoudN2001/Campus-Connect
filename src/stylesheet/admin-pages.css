@@ -596,7 +596,6 @@ td {
     justify-content: space-between;
     align-items: center;
     margin: 0 0 2rem 0;
-
 }
 
 .search-filter .filters {
@@ -626,19 +625,26 @@ td {
     color: var(--color-text);
 }
 
-.search-filter .filters .pending:nth-of-type(2):hover {
-    background-color: #FFF3CD;
-    color: var(--color-pending);
-}
 
-.search-filter .filters .approved:nth-of-type(3):hover {
+.search-filter .filters .filter:nth-of-type(2):hover {
     background-color: #D4EDDA;
     color: var(--color-success);
 }
 
-.search-filter .filters .rejected:nth-of-type(4):hover {
+.search-filter .filters .filter:nth-of-type(3):hover {
+    background-color: #FFF3CD;
+    color: var(--color-pending);
+}
+
+.search-filter .filters .filter:nth-of-type(4):hover {
     background-color: #F8D7DA;
     color: var(--color-error);
+}
+
+.search-filter .filters .filter.active,
+.search-filter .filters .filter.active:hover {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
 }
 
 /* ===== FILTER ===== */
@@ -810,7 +816,7 @@ input:hover {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem 2rem;
     justify-content: center;
-    margin: 0 auto;  
+    margin: 0 auto;
     max-width: 70%;
 }
 
