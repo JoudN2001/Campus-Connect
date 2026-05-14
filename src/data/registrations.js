@@ -54,21 +54,20 @@ const sampleEvents = [
   "Resume Writing Workshop",
 ];
 const statuses = ["Pending", "Approved", "Rejected"];
-const timeframes = [
-  "Just now",
-  "5 mins ago",
-  "15 mins ago",
-  "1 hour ago",
-  "2 hours ago",
-  "5 hours ago",
-  "Yesterday",
-  "2 days ago",
-  "1 week ago",
-];
+
+function getRandomDate(start, end) {
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime()),
+  );
+}
 
 const registrationsData = [];
 
-for (let i = 1; i <= 100; i++) {
+const endDate = new Date();
+const startDate = new Date();
+startDate.setDate(endDate.getDate() - 30);
+
+for (let i = 1; i <= 145; i++) {
   const randomFirstName =
     firstNames[Math.floor(Math.random() * firstNames.length)];
   const randomLastName =
@@ -76,7 +75,8 @@ for (let i = 1; i <= 100; i++) {
   const randomEvent =
     sampleEvents[Math.floor(Math.random() * sampleEvents.length)];
   const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
-  const randomTime = timeframes[Math.floor(Math.random() * timeframes.length)];
+
+  const randomDate = getRandomDate(startDate, endDate);
 
   const avatarId = (i % 70) + 1;
 
@@ -84,7 +84,7 @@ for (let i = 1; i <= 100; i++) {
     id: i,
     name: `${randomFirstName} ${randomLastName}`,
     event: randomEvent,
-    dateApplied: randomTime,
+    dateApplied: randomDate.toISOString(),
     status: randomStatus,
     avatar: `https://i.pravatar.cc/150?img=${avatarId}`,
   });

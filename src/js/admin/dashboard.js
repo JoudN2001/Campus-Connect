@@ -66,3 +66,57 @@ featuredEvents.innerHTML = randomEvents
     </div>`;
   })
   .join("");
+
+// RECENT REGISTRATIONS
+const tableBody = document.querySelector("tbody");
+const lastRegistrations = [...registrationsData]
+  .sort((a, b) => {
+    return new Date(a.date) - new Date(b.date);
+  })
+  .slice(0, 3);
+
+tableBody.innerHTML = lastRegistrations
+  .map((reg) => {
+    const formatedDate = formatTimeAgo(new Date(reg.dateApplied));
+    let statusClass = "pending";
+    if (reg.status === "Approved") statusClass = "approved";
+    if (reg.status === "Rejected") statusClass = "rejected";
+    return `
+<tr>
+    <td>
+        <div class="student-profile">
+            <img src="${reg.avatar}" alt="${reg.name}">
+            <span class="name">${reg.name}</span>
+        </div>
+    </td>
+    <td>${reg.event}</td>
+    <td class="date-text">${formatedDate}</td>
+    <td><span class="status-badge pending ${statusClass}">${reg.status}</span></td>
+    <td>
+        <a href="./registrations.html" class="action-link">See More</a>
+    </td>
+</tr>`;
+  })
+  .join("");
+
+// FORMATE TIME A GO
+function formatTimeAgo(date, locale = "en") {
+  const diffInSeconds = Math.floor((date - new Date()) / 1000);
+  const units = [
+    { name: "year", seconds: 31536000 },
+    { name: "month", seconds: 2592000 },
+    { name: "day", seconds: 86400 },
+    { name: "hour", seconds: 3600 },
+    { name: "minute", seconds: 60 },
+    { name: "second", seconds: 1 },
+  ];
+
+  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
+
+  for (const unit of units) {
+    if (Math.abs(diffInSeconds) >= unit.seconds || unit.name === "second") {
+      const value = Math.floor(diffInSeconds / unit.seconds);
+      return rtf.format(value, unit.name);
+    }
+  }
+}

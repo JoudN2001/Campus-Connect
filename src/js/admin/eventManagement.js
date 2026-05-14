@@ -8,9 +8,11 @@ const filterActiveBtn = document.getElementById("active");
 const filterCompletedBtn = document.getElementById("completed");
 const filtersBtns = document.querySelectorAll(".filter");
 
-// SUMMARY CARD 
-const summaryCardValue = document.querySelector(".card .value")
-summaryCardValue.innerHTML= eventsData.filter((event) => event.status === "Active").length
+// SUMMARY CARD
+const summaryCardValue = document.querySelector(".card .value");
+summaryCardValue.innerHTML = eventsData.filter(
+  (event) => event.status === "Active",
+).length;
 
 // TABLE & PAGINATION
 const tableBody = document.querySelector("tbody");
@@ -83,9 +85,9 @@ function renderTable() {
   </td>
   <td>
     <div class="action-buttons icon-only">
-      <span class="material-symbols-outlined action-icon">edit</span>
-      <span class="material-symbols-outlined action-icon">visibility</span>
-      <span class="material-symbols-outlined action-icon rejected">delete</span>
+      <span class="material-symbols-outlined action-icon edit-btn" data-id="${event.id}" title="Edit">edit</span>
+      <span class="material-symbols-outlined action-icon view-btn" data-id="${event.id}" title="View">visibility</span>
+      <span class="material-symbols-outlined action-icon delete-btn rejected" data-id="${event.id}" title="Delete">delete</span>
     </div>
   </td>
 </tr>`;
@@ -131,5 +133,108 @@ filtersBtns.forEach((filterBtn) => {
     renderTable();
   });
 });
+
+tableBody.addEventListener("click", (e) => {
+  if (e.target.classList.contains("edit-btn")) {
+    const id = parseInt(e.target.getAttribute("data-id"));
+    alert(
+      `A form to edit event data number ${id} will be opened in the next phase (Phase 3).`,
+    );
+  }
+
+  if (e.target.classList.contains("view-btn")) {
+    const id = parseInt(e.target.getAttribute("data-id"));
+    alert(`View full details of event number ${id}.`);
+  }
+
+  if (e.target.classList.contains("delete-btn")) {
+    const id = parseInt(e.target.getAttribute("data-id"));
+
+    if (confirm("Are you sure you want to permanently delete this event?")) {
+      const index = eventsData.findIndex((event) => event.id === id);
+      if (index !== -1) {
+        eventsData.splice(index, 1);
+        alert("The event has been successfully deleted!");
+
+        summaryCardValue.innerHTML = eventsData.filter(
+          (event) => event.status === "Active",
+        ).length;
+      }
+
+      const activeFilter = document.querySelector(".filter.active").id;
+      if (activeFilter === "upcoming") {
+        filteredData = eventsData.filter(
+          (event) => event.status === "Upcoming",
+        );
+      } else if (activeFilter === "active") {
+        filteredData = eventsData.filter((event) => event.status === "Active");
+      } else if (activeFilter === "cancelled") {
+        filteredData = eventsData.filter(
+          (event) => event.status === "Cancelled",
+        );
+      } else if (activeFilter === "completed") {
+        filteredData = eventsData.filter(
+          (event) => event.status === "Completed",
+        );
+      } else {
+        filteredData = eventsData;
+      }
+
+      renderTable();
+    }
+  }
+});
+
+// SEARCH FILTERATION
+const searchInput = document.querySelector('input[type="search"]');
+const searchForm = document.querySelector(".search-filter form");
+
+if (searchForm) {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+
+    const activeFilter = document.querySelector(".filter.active").id;
+    let tempFilteredData = eventsData;
+
+      if (activeFilter === "upcoming") {
+        filteredData = eventsData.filter(
+          (event) => event.status === "Upcoming",
+        );
+      } else if (activeFilter === "active") {
+        filteredData = eventsData.filter((event) => event.status === "Active");
+      } else if (activeFilter === "cancelled") {
+        filteredData = eventsData.filter(
+          (event) => event.status === "Cancelled",
+        );
+      } else if (activeFilter === "completed") {
+        filteredData = eventsData.filter(
+          (event) => event.status === "Completed",
+        );
+      } else {
+        filteredData = eventsData;
+      }
+
+    if (searchTerm !== "") {
+      filteredData = tempFilteredData.filter((user) => {
+        return (
+          user.title.toLowerCase().includes(searchTerm) ||
+          user.location.toLowerCase().includes(searchTerm) ||
+          user.category.toLowerCase().includes(searchTerm) 
+        );
+      });
+    } else {
+      filteredData = tempFilteredData;
+    }
+
+    currentPage = 1;
+    renderTable();
+  });
+}
 
 renderTable();

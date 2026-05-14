@@ -59,11 +59,11 @@ function renderTable() {
             </td>
             <td><span class="status-badge ${statusClass}">${user.status}</span></td>
             <td>
-                <select class="role-dropdown">
-                    <option ${user.role === "Administrator" ? "selected" : ""}>Administrator</option>
-                    <option ${user.role === "Moderator" ? "selected" : ""}>Moderator</option>
-                    <option ${user.role === "Faculty" ? "selected" : ""}>Faculty</option>
-                    <option ${user.role === "Student" ? "selected" : ""}>Student</option>
+                <select class="role-dropdown" data-id="${user.id}">
+                    <option value="Administrator" ${user.role === "Administrator" ? "selected" : ""}>Administrator</option>
+                    <option value="Moderator" ${user.role === "Moderator" ? "selected" : ""}>Moderator</option>
+                    <option value="Faculty" ${user.role === "Faculty" ? "selected" : ""}>Faculty</option>
+                    <option value="Student" ${user.role === "Student" ? "selected" : ""}>Student</option>
                 </select>
             </td>
         </tr>`;
@@ -106,17 +106,85 @@ filtersBtns.forEach((filterBtn) => {
     } else if (filterBtn.id === "faculty") {
       filteredData = usersData.filter((user) => user.role === "Faculty");
     } else if (filterBtn.id === "admin") {
-      // Include both Administrators and Moderators in the Admin filter
       filteredData = usersData.filter(
         (user) => user.role === "Administrator" || user.role === "Moderator",
       );
     }
 
-    // Reset to page 1 and re-render
     currentPage = 1;
     renderTable();
   });
 });
 
-// INITIAL RENDER
+tableBody.addEventListener("change", (e) => {
+  if (e.target.classList.contains("role-dropdown")) {
+    const id = parseInt(e.target.getAttribute("data-id"));
+    const newRole = e.target.value;
+
+    const index = usersData.findIndex((user) => user.id === id);
+    if (index !== -1) {
+      usersData[index].role = newRole;
+      alert(`User permission changed to ${newRole} successfully!`);
+    }
+
+    const activeFilter = document.querySelector(".filter.active").id;
+    if (activeFilter === "student") {
+      filteredData = usersData.filter((user) => user.role === "Student");
+    } else if (activeFilter === "faculty") {
+      filteredData = usersData.filter((user) => user.role === "Faculty");
+    } else if (activeFilter === "admin") {
+      filteredData = usersData.filter(
+        (user) => user.role === "Administrator" || user.role === "Moderator",
+      );
+    } else {
+      filteredData = usersData;
+    }
+
+    renderTable();
+  }
+});
+
+// SEARCH FILTERATION
+const searchInput = document.querySelector('input[type="search"]');
+const searchForm = document.querySelector(".search-filter form");
+
+if (searchForm) {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+
+    const activeFilter = document.querySelector(".filter.active").id;
+    let tempFilteredData = usersData;
+
+    if (activeFilter === "student") {
+      tempFilteredData = usersData.filter((user) => user.role === "Student");
+    } else if (activeFilter === "faculty") {
+      tempFilteredData = usersData.filter((user) => user.role === "Faculty");
+    } else if (activeFilter === "admin") {
+      tempFilteredData = usersData.filter(
+        (user) => user.role === "Administrator" || user.role === "Moderator",
+      );
+    }
+
+    if (searchTerm !== "") {
+      filteredData = tempFilteredData.filter((user) => {
+        return (
+          user.name.toLowerCase().includes(searchTerm) ||
+          user.email.toLowerCase().includes(searchTerm)
+        );
+      });
+    } else {
+      filteredData = tempFilteredData;
+    }
+
+    currentPage = 1;
+    renderTable();
+  });
+}
+
 renderTable();
