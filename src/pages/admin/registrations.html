@@ -85,17 +85,17 @@
             <div class="card">
                 <span class="icon material-symbols-outlined">group</span>
                 <p class="label">Total Registrations</p>
-                <h1 class="value">12,840</h1>
+                <h1 id="total-registrations" class="value"></h1>
             </div>
             <div class="card">
                 <span class="icon material-symbols-outlined">pending_actions</span>
                 <p class="label">Pending Approvals</p>
-                <h1 class="value">158</h1>
+                <h1 id="pending-approvals" class="value"></h1>
             </div>
             <div class="card">
                 <span class="icon material-symbols-outlined">calendar_check</span>
-                <p class="label">Approved Today</p>
-                <h1 class="value">22</h1>
+                <p class="label">Approved</p>
+                <h1 id="active-events" class="value"></h1>
             </div>
         </section>
         <!-- ===== SUMMARY CARDS ===== -->
@@ -110,10 +110,11 @@
                     </div>
                 </form>
                 <div class="filters">
-                    <button class="filter"><span class="material-symbols-outlined">filter_list</span>All Events</button>
-                    <button class="filter pending">Pending</button>
-                    <button class="filter approved">Approved</button>
-                    <button class="filter rejected">Rejected</button>
+                    <button id="all" class="filter active"><span class="material-symbols-outlined">filter_list</span>All
+                        Events</button>
+                    <button id="pending" class="filter ">Pending</button>
+                    <button id="approved" class="filter ">Approved</button>
+                    <button id="rejected" class="filter ">Rejected</button>
                 </div>
             </div>
             <!-- ===== SEARCH + FILTERATION ===== -->
@@ -130,120 +131,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <div class="student-profile">
-                                    <img src="https://i.pravatar.cc/150?img=12" alt="Liam Gallagher">
-                                    <span class="name">Liam Gallagher</span>
-                                </div>
-                            </td>
-                            <td>Quantum Computing Workshop</td>
-                            <td class="date-text">5 mins ago</td>
-                            <td><span class="status-badge pending">Pending</span></td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon approved">check</span>
-                                    <span class="material-symbols-outlined action-icon rejected">close</span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="student-profile">
-                                    <img src="https://i.pravatar.cc/150?img=5" alt="Aisha Patel">
-                                    <span class="name">Aisha Patel</span>
-                                </div>
-                            </td>
-                            <td>Freshers' Welcome Mixer</td>
-                            <td class="date-text">15 mins ago</td>
-                            <td><span class="status-badge approved">Approved</span></td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon approved">check</span>
-                                    <span class="material-symbols-outlined action-icon rejected">close</span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="student-profile">
-                                    <img src="https://i.pravatar.cc/150?img=11" alt="Carlos Mendoza">
-                                    <span class="name">Carlos Mendoza</span>
-                                </div>
-                            </td>
-                            <td>Inter-College Track Meet</td>
-                            <td class="date-text">1 hour ago</td>
-                            <td><span class="status-badge rejected">Rejected</span></td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon approved">check</span>
-                                    <span class="material-symbols-outlined action-icon rejected">close</span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="student-profile">
-                                    <img src="https://i.pravatar.cc/150?img=3" alt="Yuki Tanaka">
-                                    <span class="name">Yuki Tanaka</span>
-                                </div>
-                            </td>
-                            <td>AI & Ethics Symposium</td>
-                            <td class="date-text">2 hours ago</td>
-                            <td><span class="status-badge pending">Pending</span></td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon approved">check</span>
-                                    <span class="material-symbols-outlined action-icon rejected">close</span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="student-profile">
-                                    <img src="https://i.pravatar.cc/150?img=9" alt="Sarah Jenkins">
-                                    <span class="name">Sarah Jenkins</span>
-                                </div>
-                            </td>
-                            <td>Alumni Networking Gala</td>
-                            <td class="date-text">1 day ago</td>
-                            <td><span class="status-badge approved">Approved</span></td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon approved">check</span>
-                                    <span class="material-symbols-outlined action-icon rejected">close</span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="student-profile">
-                                    <img src="https://i.pravatar.cc/150?img=8" alt="David Osei">
-                                    <span class="name">David Osei</span>
-                                </div>
-                            </td>
-                            <td>Public Speaking Masterclass</td>
-                            <td class="date-text">2 days ago</td>
-                            <td><span class="status-badge pending">Pending</span></td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon approved">check</span>
-                                    <span class="material-symbols-outlined action-icon rejected">close</span>
-                                </div>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
                 <div class="table-footer">
-                    <p>Showing 3 of 158 pending entries</p>
+                    <p class="pagination-num"></p>
                     <div class="pagination">
-                        <button class="btn btn-outline">Previous</button>
-                        <button class="btn btn-primary">Next</button>
+                        <button id="previous" class="btn btn-outline">Previous</button>
+                        <button id="next" class="btn btn-primary">Next</button>
                     </div>
                 </div>
             </div>
@@ -257,5 +151,6 @@
         </div>
     </footer>
 </body>
+<script type="module" src="/src/js/admin/registrations.js"></script>
 
 </html>
