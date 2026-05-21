@@ -16,73 +16,44 @@
   </head>
 
   <body>
-    <div class="container nav-container">
-      <header>
-        <a href="./home-page.html">
-          <h1>Campus<span>Connect </span></h1>
-        </a>
-        <!-- NAVBAR -->
-        <nav>
-          <ul class="nav-links">
-            <li><a href="./home-page.html">Home</a></li>
-            <li><a href="./events-page.html">Events</a></li>
-            <li><a href="./registration-page.html">Registration</a></li>
-            <li><a href="./contact-page.html">Contact</a></li>
-          </ul>
-        </nav>
+    <header class="header">
+      <a href="./home-page.html">
+        <h1>Campus<span>Connect</span></h1>
+      </a>
+      <!-- NAVBAR -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./home-page.html">Home</a></li>
+          <li><a href="./events-page.html">Events</a></li>
+          <li><a href="./registration-page.html">Registration</a></li>
+          <li><a href="./contact-page.html">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div>
-          <button><a href="./registration-page.html"> Sign In </a></button>
-          <button>
-            <a href="./registration-page.html">
-              <span class="material-symbols-outlined"> account_circle </span>
-            </a>
-          </button>
-        </div>
-
-        <!-- ===== NAVBAR ===== -->
-      </header>
-    </div>
-
-    <!-- TODO: Add advertising card -->
-
-    <!-- Section-1 -->
-    <div>
-      <!-- SEARCH FORM -->
-      <div>
-        <form>
-          <input type="search" placeholder="search Events by name" /> <br />
-          <br />
-          <button type="submit">Search</button>
-        </form>
+      <div class="nav-btns">
+        <button><a href="./registration-page.html"> Sign In </a></button>
+        <button>
+          <a href="./registration-page.html">
+            <span class="material-symbols-outlined"> account_circle </span>
+          </a>
+        </button>
       </div>
-      <!-- ===== SEARCH FORM ===== -->
-    </div>
 
-    <!-- ===== Section-1 ===== -->
-
-    <!-- Section-2 -->
+      <!-- ===== NAVBAR ===== -->
+    </header>
 
     <!--  advertising card -->
     <div>
-      <!-- Filter Buttons -->
-      <div>
-        <button>All</button>
-        <button>Academic</button>
-        <button>Technology</button>
-        <button>Social</button>
-        <button>Sports</button>
-      </div>
-      <!-- ===== Filter Buttons ===== -->
+      <div class="advertising-card">
+        <span class="title"> Events Highlights </span>
 
-      <div>
-        <span> Events Highlights </span>
-
-        <span> <h1>How to Participate in Campus Events</h1> </span>
+        <span>
+          <h1>How to Participate in Campus Events</h1>
+        </span>
 
         <span>
           <p>
-            Join us to participate in exciting campus events and activities!
+            Join us to participate in exciting campus events and activities !
           </p>
         </span>
 
@@ -94,101 +65,157 @@
     </div>
     <!-- ===== advertising card ===== -->
 
+    <!-- TODO: Add advertising card -->
+
+    <!-- Section-1 -->
+
+    <div class="search-container">
+      <!-- SEARCH FORM -->
+      <div class="search-form">
+        <form class="search-bar" method="get">
+          <input type="search" placeholder="Search events by name" /> <br />
+          <br />
+          <button type="submit" class="search-btn">Search</button>
+        </form>
+      </div>
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button>All</button>
+        <button>Academic</button>
+        <button>Technology</button>
+        <button>Social</button>
+        <button>Sports</button>
+      </div>
+      <!-- ===== Filter Buttons ===== -->
+    </div>
+    <!-- ===== SEARCH FORM ===== -->
+
+    <!-- ===== Section-1 ===== -->
+
+    <!-- Section-2 -->
+
     <!-- ===== Section-2 ===== -->
 
     <!-- Section-3 -->
 
-    <div>
-      <div>
-        <div>
-          <span>Curation</span>
-          <h2>Featured Events</h2>
-          <!--  as  pr Engage with the pinnacle of academic and professional gatherings curated specifically for our community members. -->
-        </div>
+    <div class="events-cards">
+      <!-- <div class="events-cards-header">
+        <span>Curation</span>
+        <h2>Featured Events</h2>
+         as  pr Engage with the pinnacle of academic and professional gatherings curated specifically for our community members.
+      </div> -->
 
-        <div>
-          <!--  as  These are visible events for the user. -->
-
+      <div class="all-cards">
+        <!--  as  These are visible events for the user. -->
+        <div class="card-1-2">
           <!-- Event-card-1 -->
-          <div>
-            <img src="https://picsum.photos/id/0/600/400" />
-
-            <span>Innovation</span>
-            <h3>AI Hackathon: Future Forge</h3>
-            <p>
+          <div class="card-1">
+            <img
+              src="https://picsum.photos/id/0/600/400"
+              alt="Event Image"
+              class="event-img"
+            />
+            <span class="card-1-tag">Innovation</span>
+            <h3 class="card-1-title">AI Hackathon: Future Forge</h3>
+            <p class="card-1-description">
               Join elite engineering minds for a 48-hour challenge to solve
               real-world problems using advanced neural networks.
             </p>
-            <button>Learn More</button>
+            <a href="./registration-page.html">
+              <button class="card-1-button">Register now</button>
+            </a>
           </div>
           <!-- ===== Event-card-1 ===== -->
 
           <!-- Event-card-2 -->
-          <div>
+          <div class="card-2">
             <img src="https://picsum.photos/id/20/600/400" />
-            <span>Professional</span>
+            <span class="card-2-tag">Professional</span>
 
-            <h3>Elite Career Seminar</h3>
-            <p>
+            <h3 class="card-2-title">Elite Career Seminar</h3>
+            <p class="card-2-description">
               Connect with Fortune 500 recruiters and learn the nuances of
               corporate leadership in this exclusive seminar series.
             </p>
-            <button>Learn More</button>
+            <a href="./registration-page.html">
+              <button class="card-2-button">Register now</button>
+            </a>
           </div>
 
           <!-- ===== Event-card-2 ===== -->
+        </div>
 
+        <div class="card-3-4">
           <!-- Event-card-3 -->
-          <div>
+          <div class="card-3">
             <img src="https://picsum.photos/id/119/600/400" />
-            <span>Technology</span>
+            <span class="card-3-tag">Technology</span>
 
-            <h3>Quantum Tech Talk</h3>
-            <p>
+            <h3 class="card-3-title">Quantum Tech Talk</h3>
+            <p class="card-3-description">
               Exploring the frontiers of quantum computing and its implications
               for cybersecurity and algorithmic architecture.
             </p>
+            <a href="./registration-page.html">
+              <button class="card-3-button">Register now</button>
+            </a>
           </div>
           <!-- ===== Event-card-3 ===== -->
 
           <!-- Event-card-4 -->
-          <div>
+          <div class="card-4">
             <img
               src="https://img.freepik.com/free-vector/secretary-online-service-platform-receptionist-answering-calls-assisting-with-document-online-course-isolated-flat-vector-illustration_613284-1730.jpg?semt=ais_hybrid&w=740&q=80"
             />
-            <h3>How to Choose a Major</h3>
-            <p>
+            <span class="card-4-tag">Academic</span>
+            <h3 class="card-4-title">How to Choose a Major</h3>
+            <p class="card-4-description">
               A comprehensive guide to help students navigate the process of
               selecting a major that aligns with their interests, skills, and
               career aspirations.
             </p>
+            <a href="./registration-page.html">
+              <button class="card-4-button">Register now</button>
+            </a>
           </div>
           <!-- ===== Event-card-4 ===== -->
-
+        </div>
+        <div class="card-5-6">
           <!-- Event-card-5 -->
-          <div>
+          <div class="card-5">
             <img
-              src="https://www.computersciencedegreehub.com/wp-content/uploads/2023/01/shutterstock_1975936445.jpg"
+              src="https://storage.googleapis.com/mindmeshacademy.firebasestorage.app/blog/how-to-start-it-career/image-3.webp"
             />
-            <h3>IT Major: Guide to Degrees, Jobs & Career Paths</h3>
-            <p>
+            <span class="card-5-tag">Academic</span>
+            <h3 class="card-5-title">
+              IT Major: Guide to Degrees, Jobs & Career Paths
+            </h3>
+            <p class="card-5-description">
               A comprehensive guide to IT majors, covering degree options, job
               prospects, and career paths in the field of Information
               Technology.
             </p>
+            <a href="./registration-page.html">
+              <button class="card-5-button">Register now</button>
+            </a>
           </div>
           <!-- ===== Event-card-5 ===== -->
 
           <!-- Event-card-6 -->
-          <div>
+          <div class="card-6">
             <img
               src="https://thenext.edu.np/wp-content/uploads/2023/03/web-development.png"
             />
-            <p>
+            <span class="card-6-tag">Academic</span>
+            <h3 class="card-6-title">IT Degree: A Comprehensive Guide</h3>
+            <p class="card-6-description">
               IT Degree: A comprehensive guide to Information Technology
               degrees, covering program options, curriculum, and career
               opportunities in the field of IT.
             </p>
+            <a href="./registration-page.html">
+              <button class="card-6-button">Register now</button>
+            </a>
           </div>
           <!-- ===== Event-card-6 ===== -->
         </div>
@@ -197,18 +224,23 @@
     <!-- ===== Section-3 ===== -->
 
     <!--  FOOTER -->
-    <footer>
-      <div class="logo">Campus<span>Connect</span></div>
-      <date>© 2024 CampusConnect. All rights reserved.</date>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Campus Map</a></li>
-          <li><a href="#">Directory</a></li>
-        </ul>
-      </nav>
-    </footer>
+    <div class="footer-container">
+      <footer>
+        <div class="left-footer">
+          <div class="logo">CampusConnect</div>
+          <date>© 2024 CampusConnect. All rights reserved.</date>
+        </div>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Campus Map</a></li>
+            <li><a href="#">Directory</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
     <!-- ===== FOOTER =====  -->
   </body>
 </html>

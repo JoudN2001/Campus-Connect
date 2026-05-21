@@ -1,0 +1,450 @@
+header {
+  background-color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header h1 {
+  color: #1a365d;
+}
+header h1 span {
+  color: #ecc94b;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header nav-links {
+  color: #2d3748;
+}
+header .nav-btns button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+header .nav-btns button a {
+  color: white;
+  text-decoration: none;
+}
+header span {
+  background-color: none;
+}
+form {
+  display: flex;
+  background-color: var(--color-background);
+  gap: 15px;
+  margin: 20px;
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  background-color: var(--color-background);
+}
+form input [type="search"] {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+}
+form button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+}
+form button:hover {
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+.filter-buttons button {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+}
+.filter-buttons button:hover {
+  background-color: #2f855a;
+  color: #fff;
+  cursor: pointer;
+}
+.advertising-card {
+  background-color: var(--color-primary);
+  height: 300px;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  justify-content: flex-end; /* push content to bottom */
+  padding: 20px;
+}
+/* TODO: Add margin-top for the title class */
+.advertising-card .title {
+  color: goldenrod;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.advertising-card h1 {
+  color: white;
+  font-size: 40px;
+  margin-left: 25px;
+  margin-top: 55px;
+}
+.advertising-card p {
+  color: lightblue;
+  font-size: 18px;
+  margin-left: 25px;
+}
+.advertising-card button {
+  background-color: white;
+  color: var(--color-primary);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.advertising-card button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+/* .events-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+} */
+.events-cards .events-cards-header {
+  display: flex;
+  gap: 20px;
+}
+.events-cards .events-cards-header span {
+  color: #1a365d;
+  font-size: 16px;
+}
+/* .all-cards {
+  display: grid;
+  height: 600px;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+} */
+.card-1 {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.card-1 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card-1 ::before {
+  /* content: ""; */
+  position: absolute;
+  inset: 0;
+}
+.card-1 * {
+  position: relative; /* above the overlay */
+}
+.card-1-tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.card-1-title {
+  font-size: 20px;
+  margin: 12px;
+  margin-left: 45px;
+}
+.card-1-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.card-1-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-1-button:hover {
+  background-color: #1a365d;
+  cursor: pointer;
+}
+.card-2 {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.card-2 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card-2-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.card-2-title {
+  font-size: 20px;
+  margin: 12px 0;
+  margin-left: 45px;
+}
+.card-2-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.card-2-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-2-button:hover {
+  background-color: #1a365d;
+  cursor: pointer;
+}
+.card-3 {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.card-3 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card-3-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.card-3-title {
+  font-size: 20px;
+  margin: 12px 0;
+  margin-left: 45px;
+}
+.card-3-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.card-3-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-3-button:hover {
+  background-color: #1a365d;
+  cursor: pointer;
+}
+.card-4 {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.card-4 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card-4-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.card-4-title {
+  font-size: 20px;
+  margin: 12px 0;
+  margin-left: 45px;
+}
+.card-4-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.card-4-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-4-button:hover {
+  background-color: #1a365d;
+  cursor: pointer;
+}
+.card-5 {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.card-5 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card-5-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.card-5-title {
+  font-size: 20px;
+  margin: 12px 0;
+  margin-left: 45px;
+}
+.card-5-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.card-5-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-5-button:hover {
+  background-color: #1a365d;
+  cursor: pointer;
+}
+.card-6 {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.card-6 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.card-6-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.card-6-title {
+  font-size: 20px;
+  margin: 12px 0;
+  margin-left: 45px;
+}
+.card-6-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.card-6-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-6-button:hover {
+  background-color: #1a365d;
+  cursor: pointer;
+}
+.card-1-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card-3-4 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card-5-6 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer {
+  display: flex; /* arrange children side by side */
+  justify-content: space-between; /* push left-footer left, nav right */
+  align-items: center; /* vertical alignment */
+  padding: 20px;
+  background-color: #f5f5f5; /* optional background */
+}
+.left-footer .logo {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-primary); /* link color */
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: var(--color-primary); /* hover color */
+  text-decoration: underline;
+  cursor: pointer;
+}

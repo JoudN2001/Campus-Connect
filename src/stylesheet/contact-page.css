@@ -9,6 +9,9 @@ header {
 header h1 {
   color: #1a365d;
 }
+header h1 span {
+  color: #ecc94b;
+}
 header ul {
   list-style: none;
   display: flex;
@@ -185,7 +188,7 @@ body {
   cursor: pointer;
 }
 .form-btns .clear-btn {
-  background-color: var(--color-primary);
+  background-color: red;
   color: var(--color-surface);
   padding: 10px 20px;
   border: none;
@@ -310,4 +313,9 @@ footer {
   text-decoration: none;
   color: var(--color-primary); /* link color */
   font-weight: bold;
+}
+.nav-links a:hover {
+  color: var(--color-primary); /* hover color */
+  text-decoration: underline;
+  cursor: pointer;
 }
