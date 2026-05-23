@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheet/normaliz.css">
-    <link rel="stylesheet" href="../stylesheet/styles.css">
+    
+    <!-- Ensure the file in your folder is actually named 'normalize.css' -->
+    <link rel="stylesheet" href="../stylesheet/global.css">
     <link rel="stylesheet" href="../stylesheet/home-page.css">
 
     <title>Home | CampusConnect</title>
@@ -38,7 +39,7 @@
             <div class="hero-buttons">
                 <a href="./admin-page.html" class="btn btn-primary">Browse Events</a>
                 <a href="#calendar" class="btn btn-outline">View Calendar</a>
-                </div>
+            </div>
         </div>
     </section>
 
@@ -118,8 +119,10 @@
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control" placeholder="Your University Email" required>
+                            <!-- Added 'for' attribute to link to the input ID -->
+                            <label for="email" class="form-label">Email Address</label>
+                            <!-- Added 'id' and 'autocomplete' attributes -->
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your University Email" autocomplete="email" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>

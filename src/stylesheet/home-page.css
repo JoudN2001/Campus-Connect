@@ -1,8 +1,4 @@
-
-@import url('../normalize.css');
-
-
-:root {
+    :root {
     /* Brand Colors */
     --color-primary-navy: #0B162C;
     --color-primary-light: #1A2C54;
@@ -235,7 +231,7 @@ header {
     color: var(--color-white);
     margin-bottom: 24px;
     letter-spacing: -1px;
-}
+} 
 
 .hero h1 span {
     color: var(--color-accent-gold);

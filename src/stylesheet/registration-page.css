@@ -1,0 +1,269 @@
+/* ==========================================================================
+   CampusConnect Registration Page Styles (Compatibility Version)
+   ========================================================================== */
+
+:root {
+    --primary-color: #112A46;
+    --primary-hover: #1A3E68;
+    --bg-color: #F3F4F6;
+    --surface-color: #FFFFFF;
+    --text-main: #1F2937;
+    --text-muted: #6B7280;
+    --input-bg: #E5E7EB;
+    --input-focus-border: #112A46;
+    --error-color: #DC2626;
+    --error-bg: #FEF2F2;
+    --border-radius-sm: 8px;
+    --border-radius-lg: 12px;
+    --transition-speed: 0.2s;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base & Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+hr, br { display: none; }
+
+/* Header & Navigation */
+/* --- Header & Navigation (Centered Links) --- */
+header {
+    background-color: var(--surface-color);
+    padding: 1.25rem 5%;
+    display: flex;
+    justify-content: center; /* Centers the navigation links */
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: relative; /* Crucial for anchoring the logo and button */
+}
+
+/* Anchor the Logo to the left */
+header h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    left: 5%;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header nav ul li a { 
+    font-weight: 500; 
+    transition: color var(--transition-speed);
+}
+
+header nav ul li a:hover { 
+    color: var(--primary-color); 
+}
+
+/* Active Nav Indicator */
+header nav ul li:nth-child(3) a {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
+/* Anchor the Sign In Button to the right */
+header nav ul li:last-child {
+    position: absolute;
+    right: 5%;
+}
+
+header nav ul li:last-child a {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-speed);
+    display: inline-block;
+    border-bottom: none; /* Prevents the active underline from applying here */
+}
+
+header nav ul li:last-child a:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsive adjust for smaller screens */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        position: static; /* Removes absolute positioning on mobile */
+        padding: 1.5rem;
+    }
+    
+    header h1, 
+    header nav ul li:last-child {
+        position: static; /* Resets to normal flow */
+    }
+    
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+/* Main Layout */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem;
+}
+
+section {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 3.5rem 3rem;
+    width: 100%;
+    max-width: 600px;
+    border-top: 6px solid var(--primary-color);
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+section > p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Error Message Banner (Styled directly from your HTML) */
+section > div:first-of-type {
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-color);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+section > div:first-of-type h3 {
+    color: var(--error-color);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+section > div:first-of-type ul li a {
+    color: var(--error-color);
+    font-size: 0.85rem;
+}
+
+/* Form Styling */
+form fieldset { border: none; padding: 0; }
+form legend { display: none; }
+form ul { display: flex; flex-direction: column; gap: 1.5rem; }
+
+form label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid transparent;
+    background-color: var(--input-bg);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: var(--input-focus-border);
+    background-color: var(--surface-color);
+}
+
+form textarea { min-height: 100px; resize: vertical; }
+
+form select {
+    height: 140px;
+    padding: 0.5rem;
+}
+
+form select option {
+    padding: 0.6rem;
+    border-radius: 4px;
+}
+
+/* Error specific input styling */
+form input[type="email"] {
+    background-color: var(--surface-color);
+    border-color: var(--error-color);
+}
+
+/* Buttons Container */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > button {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form > button:nth-of-type(1) {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}
+
+form > button:nth-of-type(2) {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    margin-top: 0.75rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer nav ul { display: flex; gap: 2rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    header, footer { flex-direction: column; gap: 1rem; text-align: center; }
+    section { padding: 2rem 1.5rem; }
+}
