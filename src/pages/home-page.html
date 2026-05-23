@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />    
     
-    <!-- Ensure the file in your folder is actually named 'normalize.css' -->
     <link rel="stylesheet" href="../stylesheet/global.css">
     <link rel="stylesheet" href="../stylesheet/home-page.css">
 
@@ -13,25 +16,34 @@
 </head>
 
 <body>
+    <header class="header">
+  <a href="./home-page.html">
+    <h1>Campus<span>Connect</span></h1>
+  </a>
+  
+  <!-- NAVBAR -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="./home-page.html">Home</a></li>
+      <li><a href="./events-page.html">Events</a></li>
+      <li><a href="./registration-page.html">Registration</a></li>
+      <li><a href="./contact-page.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <header>
-        <div class="nav-container container">
-            <div class="logo">Campus<span>Connect</span></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="./home-page.html">Home</a></li>
-                    <li><a href="./events-page.html">Events</a></li>
-                    <li><a href="./registration-page.html">Registration</a></li>
-                    <li><a href="./contact-page.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="nav-actions">
-                <a href="./registration-page.html" class="btn btn-primary">Sign In</a>
-                <button class="mobile-menu-btn">☰</button>
-            </div>
-        </div>
-    </header>
-
+  <div class="nav-btns">
+    <!-- Added 'sign-in-btn' class -->
+    <button class="sign-in-btn">
+      <a href="./admin-page.html"> Sign In </a>
+    </button>
+    <!-- Added 'profile-btn' class -->
+    <button class="profile-btn">
+      <a href="./registration-page.html">
+        <span class="material-symbols-outlined"> account_circle </span>
+      </a>
+    </button>
+  </div>
+</header>
     <section class="hero">
         <div class="container hero-content">
             <h1>Connect with Your <span>Campus</span> Community</h1>
@@ -134,32 +146,28 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="logo">Campus<span>Connect</span></div>
+    <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-container">
+    
+    <!-- Left Side: Brand and Copyright -->
+    <div class="footer-left">
+      <h2 class="footer-logo">CampusConnect</h2>
+      <p class="footer-copyright">&copy; 2024 CampusConnect University. All rights reserved.</p>
+    </div>
 
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Campus Map</a></li>
-                        <li><a href="#">Directory</a></li>
-                    </ul>
-                </nav>
+    <!-- Right Side: Links -->
+    <div class="footer-right">
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Campus Map</a></li>
+        <li><a href="#">Directory</a></li>
+      </ul>
+    </div>
 
-                <div class="social-links">
-                    <a href="#">X</a>
-                    <a href="#">In</a>
-                    <a href="#">Ig</a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                &copy; 2026 CampusConnect University. All rights reserved. Engineered for Performance.
-            </div>
-        </div>
-    </footer>
+  </div>
+</footer>
 
 </body>
 </html>
