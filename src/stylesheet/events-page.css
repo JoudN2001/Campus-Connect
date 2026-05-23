@@ -85,7 +85,7 @@ form button:hover {
   background-color: var(--color-primary);
   height: 300px;
   display: flex;
-  flex-direction: column; /* stack children vertically */
+  flex-direction: column;
   justify-content: flex-end; /* push content to bottom */
   padding: 20px;
   border-radius: 10px;
