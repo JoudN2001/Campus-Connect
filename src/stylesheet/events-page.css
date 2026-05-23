@@ -88,6 +88,10 @@ form button:hover {
   flex-direction: column; /* stack children vertically */
   justify-content: flex-end; /* push content to bottom */
   padding: 20px;
+  border-radius: 10px;
+  width: 800px;
+  margin-left: 350px;
+  align-items: center;
 }
 /* TODO: Add margin-top for the title class */
 .advertising-card .title {
