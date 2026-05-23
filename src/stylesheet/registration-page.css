@@ -1,8 +1,3 @@
-/* ==========================================================================
-   CampusConnect Registration Page Styles (Compatibility Version)
-   ========================================================================== */
-
-/* Base & Reset */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -19,156 +14,172 @@ body {
     min-height: 100vh;
 }
 
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-hr, br { display: none; }
-
-/* Header & Navigation */
-/* --- Header & Navigation (Centered Links) --- */
-header {
-    background-color: var(--surface-color);
-    padding: 1.25rem 5%;
-    display: flex;
-    justify-content: center; /* Centers the navigation links */
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    position: relative; /* Crucial for anchoring the logo and button */
+a { 
+    text-decoration: none; 
+    color: inherit; 
 }
 
-/* Anchor the Logo to the left */
-header h1 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    font-weight: 700;
+ul { 
+    list-style: none; 
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.header {
+    background-color: var(--surface-color);
+    padding: 0 5%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: relative; 
+    height: 70px;
+}
+
+.header .logo {
     position: absolute;
     left: 5%;
 }
 
-header nav ul {
+.header h1 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.header nav ul.nav-links {
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    height: 100%;
 }
 
-header nav ul li a { 
+.header nav ul.nav-links li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul.nav-links li a { 
+    color: var(--text-muted);
     font-weight: 500; 
+    font-size: 0.95rem;
     transition: color var(--transition-speed);
+    padding: 1.5rem 0; /* Creates clickable area and spacing for underline */
+    border-bottom: 2px solid transparent;
 }
 
-header nav ul li a:hover { 
+.header nav ul.nav-links li a:hover { 
     color: var(--primary-color); 
 }
 
 /* Active Nav Indicator */
-header nav ul li:nth-child(3) a {
+.header nav ul.nav-links li a.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 4px;
+    font-weight: 600;
 }
 
-/* Anchor the Sign In Button to the right */
-header nav ul li:last-child {
+.nav-btns {
     position: absolute;
     right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-header nav ul li:last-child a {
+.profile-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    transition: opacity var(--transition-speed);
+}
+
+.profile-btn:hover {
+    opacity: 0.8;
+}
+
+.profile-btn span {
+    font-size: 1.8rem;
+}
+
+.sign-in-btn {
     background-color: var(--primary-color);
-    color: var(--surface-color);
-    padding: 0.6rem 1.5rem;
+    border: none;
     border-radius: var(--border-radius-sm);
     transition: background-color var(--transition-speed);
-    display: inline-block;
-    border-bottom: none; /* Prevents the active underline from applying here */
+    cursor: pointer;
 }
 
-header nav ul li:last-child a:hover {
+.sign-in-btn a {
+    color: var(--surface-color);
+    padding: 0.5rem 1.25rem;
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.sign-in-btn:hover {
     background-color: var(--primary-hover);
 }
 
-/* Responsive adjust for smaller screens */
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 1.5rem;
-        position: static; /* Removes absolute positioning on mobile */
-        padding: 1.5rem;
-    }
-    
-    header h1, 
-    header nav ul li:last-child {
-        position: static; /* Resets to normal flow */
-    }
-    
-    header nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-}
-
-/* Main Layout */
+/* ==========================================================================
+   Main Layout & Registration Section
+   ========================================================================== */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
 }
 
-section {
+.registration-card {
     background-color: var(--surface-color);
     border-radius: var(--border-radius-lg);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    padding: 3.5rem 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 3.5rem 4rem;
     width: 100%;
-    max-width: 600px;
-    border-top: 6px solid var(--primary-color);
+    max-width: 650px;
+    border-top: 8px solid var(--primary-color);
 }
 
-section h2 {
+.registration-card h2 {
     text-align: center;
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-section > p {
+.registration-card .subtitle {
     text-align: center;
     color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-/* Error Message Banner (Styled directly from your HTML) */
-section > div:first-of-type {
-    background-color: var(--error-bg);
-    border: 1px solid var(--error-color);
-    border-radius: var(--border-radius-sm);
-    padding: 1rem;
-    margin-bottom: 2rem;
-}
-
-section > div:first-of-type h3 {
-    color: var(--error-color);
+    margin-bottom: 2.5rem;
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
 }
 
-section > div:first-of-type ul li a {
-    color: var(--error-color);
-    font-size: 0.85rem;
+/* Form Groups & Inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Replaces the need for <br> */
 }
 
-/* Form Styling */
-form fieldset { border: none; padding: 0; }
-form legend { display: none; }
-form ul { display: flex; flex-direction: column; gap: 1.5rem; }
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
 
 form label {
-    display: block;
     font-weight: 600;
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    color: var(--text-main);
 }
 
 form input, form select, form textarea {
@@ -179,8 +190,13 @@ form input, form select, form textarea {
     background-color: var(--input-bg);
     font-family: inherit;
     font-size: 1rem;
+    color: var(--text-main);
     outline: none;
-    transition: 0.2s ease;
+    transition: border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #a1a1aa;
 }
 
 form input:focus, form select:focus, form textarea:focus {
@@ -188,65 +204,168 @@ form input:focus, form select:focus, form textarea:focus {
     background-color: var(--surface-color);
 }
 
-form textarea { min-height: 100px; resize: vertical; }
+form textarea { 
+    min-height: 100px; 
+    resize: vertical; 
+}
 
 form select {
-    height: 140px;
+    height: 150px;
     padding: 0.5rem;
 }
 
 form select option {
-    padding: 0.6rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 4px;
+    font-size: 0.95rem;
 }
 
-/* Error specific input styling */
-form input[type="email"] {
-    background-color: var(--surface-color);
-    border-color: var(--error-color);
+.help-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
 }
 
-/* Buttons Container */
-form {
+/* Error State Styling */
+form input.error-input {
+    background-color: #fff;
+    border: 1px solid var(--error-color);
+    color: var(--text-main);
+}
+
+.error-message {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--error-color);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    font-weight: 500;
 }
 
-form > button {
-    margin-top: 1.5rem;
+.error-message .icon {
+    font-size: 1.1rem;
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-actions button {
     padding: 1rem;
     font-weight: 600;
     border-radius: var(--border-radius-sm);
     cursor: pointer;
     border: none;
     font-size: 1rem;
-    width: 100%;
+    transition: background-color var(--transition-speed);
 }
 
-form > button:nth-of-type(1) {
+.submit-btn {
+    flex: 2; /* Takes up more space */
     background-color: var(--primary-color);
     color: var(--surface-color);
 }
 
-form > button:nth-of-type(2) {
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.reset-btn {
+    flex: 1; /* Takes up less space */
     background-color: var(--input-bg);
     color: var(--text-main);
-    margin-top: 0.75rem;
 }
 
-/* Footer */
-footer {
+.reset-btn:hover {
+    background-color: #d1d5db; /* Slightly darker gray on hover */
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 5%;
+    align-items: flex-end;
+    padding: 2rem 5% 3rem 5%;
     color: var(--text-muted);
     font-size: 0.9rem;
+    background-color: transparent; /* Blends with body */
 }
 
-footer nav ul { display: flex; gap: 2rem; }
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-/* Responsive */
+.footer-logo {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-nav ul { 
+    display: flex; 
+    gap: 2rem; 
+}
+
+.footer-nav ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        position: static; 
+        padding: 1.5rem;
+        height: auto;
+    }
+    
+    .header .logo, 
+    .nav-btns {
+        position: static; 
+    }
+    
+    .header nav ul.nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .header nav ul.nav-links li a {
+        padding: 0.5rem 0;
+    }
+}
+
 @media (max-width: 768px) {
-    header, footer { flex-direction: column; gap: 1rem; text-align: center; }
-    section { padding: 2rem 1.5rem; }
+    .footer { 
+        flex-direction: column; 
+        gap: 1.5rem; 
+        text-align: center; 
+        align-items: center;
+    }
+    
+    .registration-card { 
+        padding: 2rem 1.5rem; 
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .submit-btn, .reset-btn {
+        width: 100%;
+    }
 }
