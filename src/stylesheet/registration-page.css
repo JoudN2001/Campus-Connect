@@ -2,23 +2,6 @@
    CampusConnect Registration Page Styles (Compatibility Version)
    ========================================================================== */
 
-:root {
-    --primary-color: #112A46;
-    --primary-hover: #1A3E68;
-    --bg-color: #F3F4F6;
-    --surface-color: #FFFFFF;
-    --text-main: #1F2937;
-    --text-muted: #6B7280;
-    --input-bg: #E5E7EB;
-    --input-focus-border: #112A46;
-    --error-color: #DC2626;
-    --error-bg: #FEF2F2;
-    --border-radius-sm: 8px;
-    --border-radius-lg: 12px;
-    --transition-speed: 0.2s;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
 /* Base & Reset */
 *, *::before, *::after {
     box-sizing: border-box;
