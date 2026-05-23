@@ -1,4 +1,3 @@
-
 .container {
     width: 100%;
     max-width: var(--container-width);
@@ -51,8 +50,8 @@
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(236, 201, 75, 0.4); 
-    filter: brightness(0.95); 
+    box-shadow: 0 4px 15px rgba(236, 201, 75, 0.4);
+    filter: brightness(0.95);
 }
 
 /* Custom Hero Button (Gold Outline + Soft Glow) */
@@ -73,7 +72,8 @@
 .btn-outline {
     background-color: transparent;
     color: var(--color-surface);
-    border-color: rgba(255, 255, 255, 0.5); /* Crisp outline */
+    border-color: rgba(255, 255, 255, 0.5);
+    /* Crisp outline */
     backdrop-filter: blur(5px);
 }
 
@@ -154,7 +154,7 @@
     border: none;
     cursor: pointer;
     margin-left: 15px;
-    padding: 0; 
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +163,7 @@
 }
 
 .header .nav-btns .profile-btn a {
-    color: var(--color-primary); 
+    color: var(--color-primary);
     text-decoration: none;
     display: flex;
 }
@@ -185,8 +185,8 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(26, 54, 93, 0.95), rgba(26, 54, 93, 0.75)), 
-                url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    background: linear-gradient(to right, rgba(26, 54, 93, 0.95), rgba(26, 54, 93, 0.75)),
+        url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
     padding-top: 80px;
 }
 
@@ -200,7 +200,7 @@
     color: var(--color-surface);
     margin-bottom: 24px;
     letter-spacing: -1px;
-} 
+}
 
 .hero h1 span {
     color: var(--color-secondary);
@@ -231,7 +231,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: -80px; 
+    margin-top: -80px;
     position: relative;
     z-index: 10;
 }
@@ -500,7 +500,8 @@ textarea.form-control {
    FOOTER (Updated Design)
    ========================================================================== */
 .footer {
-    background-color: var(--color-surface); /* Uses your existing variable */
+    background-color: var(--color-surface);
+    /* Uses your existing variable */
     border-top: 1px solid var(--color-divider);
     padding: 40px 0;
     color: var(--text-muted, #666);
@@ -547,48 +548,48 @@ textarea.form-control {
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 992px) {
-    .hero h1 { 
-        font-size: 3rem; 
+    .hero h1 {
+        font-size: 3rem;
     }
-    
-    .contact-wrapper { 
-        grid-template-columns: 1fr; 
-        gap: 0; 
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 }
 
 @media (max-width: 768px) {
-    .header nav ul.nav-links { 
-        display: none; 
+    .header nav ul.nav-links {
+        display: none;
     }
-    
-    .mobile-menu-btn { 
-        display: block; 
+
+    .mobile-menu-btn {
+        display: block;
     }
-    
-    .hero h1 { 
-        font-size: 2.5rem; 
+
+    .hero h1 {
+        font-size: 2.5rem;
     }
-    
-    .hero-buttons { 
-        flex-direction: column; 
+
+    .hero-buttons {
+        flex-direction: column;
     }
-    
-    .about-grid { 
-        margin-top: 40px; 
+
+    .about-grid {
+        margin-top: 40px;
     }
-    
-    .section-padding { 
-        padding: 60px 0; 
+
+    .section-padding {
+        padding: 60px 0;
     }
-    
+
     /* Mobile adjustments for footer */
     .footer-container footer {
         flex-direction: column;
         text-align: center;
         gap: 30px;
     }
-    
+
     .footer-container nav ul.nav-links {
         justify-content: center;
         flex-wrap: wrap;
