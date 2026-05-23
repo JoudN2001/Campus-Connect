@@ -213,13 +213,14 @@ a {
 }
 
 .clear-btn {
-  background-color: #ef4444;
-  color: white;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
   padding: 14px 28px;
-  border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 /* Right Info Area (.info-container) */
