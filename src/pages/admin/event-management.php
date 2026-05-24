@@ -12,6 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     exit();
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    echo "<pre>";
+    print_r($_POST); 
+    echo "</pre>";
+    
+    exit(); 
+}
+
 // Pagination
 $limit = 5;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
@@ -87,7 +95,7 @@ $active_events_count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) a
                     </a>
                 </li>
                 <li>
-                    <a class="link" href="./events.php">
+                    <a class="link" href="./registrations.php">
                         <span class="material-symbols-outlined">how_to_reg</span>
                         <span>Registrations</span>
                     </a>
@@ -237,7 +245,7 @@ $active_events_count = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) a
         </section>
         <!-- ===== EVENTS TABLE ===== -->
         <!-- ADD EVENT FORM -->
-        <form action="" class="add-event">
+        <form method="post" class="add-event">
             <div class="form-grid">
 
                 <div class="input-group full-width">

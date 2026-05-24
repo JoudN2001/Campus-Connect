@@ -129,7 +129,6 @@ $recent_registrations = mysqli_fetch_all($recent_result, MYSQLI_ASSOC);
                 <p class="label">Active Events</p>
                 <h1 class="value"><?= $active_events_count; ?></h1>
             </div>
-
             <div class="card">
                 <span class="icon material-symbols-outlined">group</span>
                 <p class="label">Total Registrations</p>
@@ -220,27 +219,16 @@ $recent_registrations = mysqli_fetch_all($recent_result, MYSQLI_ASSOC);
                                 <td>
                                     <div class="student-profile">
                                         <img src="<?= $reg['avatar']; ?>" alt="<?= $reg['student_name']; ?>">
-                                        <div class="info-stack">
-                                            <span class="name"><?= $reg['student_name']; ?></span>
-                                            <span class="sub-text"><?= $reg['event_name']; ?></span>
-                                        </div>
+                                        <span class="name"><?= $reg['student_name']; ?></span>
                                     </div>
                                 </td>
+                                <td><?= $reg['event_name']; ?></td>
+                                <td class="date-text"><?= $formatedDate; ?></td>
                                 <td>
-                                    <div class="info-stack">
-                                        <span class="main-text"><?= $formatedDate; ?></span>
-                                    </div>
+                                    <span class="status-badge <?= $statusClass; ?>"><?= $reg['status']; ?></span>
                                 </td>
                                 <td>
-                                    <span class="status-badge <?= $statusClass; ?>">
-                                        <?= $reg['status']; ?>
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="action-buttons icon-only">
-                                        <span class="material-symbols-outlined action-icon approved" title="Approve">check</span>
-                                        <span class="material-symbols-outlined action-icon rejected" title="Reject">close</span>
-                                    </div>
+                                    <a href="./registrations.php" class="action-link">See More</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
