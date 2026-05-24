@@ -8,9 +8,9 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS EXTERNAL FILES -->
-    <link rel="stylesheet" href="/src/stylesheet/normaliz.css">
-    <link rel="stylesheet" href="/src/stylesheet/global.css">
-    <link rel="stylesheet" href="/src/stylesheet/admin-pages.css">
+<link rel="stylesheet" href="../../stylesheet/normaliz.css">
+<link rel="stylesheet" href="../../stylesheet/global.css">
+<link rel="stylesheet" href="../../stylesheet/admin-pages.css">
     <title>Admin</title>
 </head>
 
@@ -24,7 +24,7 @@
     <div class="side-menu">
         <!-- HEADER -->
         <div class="header">
-            <h2 class="title"><a href="./adim-page.html">Admin Console</a></h2>
+            <h2 class="title"><a href="./adim-page.php">Admin Console</a></h2>
             <p class="descreption">UNIVERSITY EVENT PLATFORM</p>
         </div>
         <!-- ===== HEADER ===== -->
@@ -32,31 +32,31 @@
         <nav>
             <ul class="nav-links">
                 <li>
-                    <a class="link" href="./dashboard.html">
+                    <a class="link" href="./dashboard.php">
                         <span class="material-symbols-outlined"> dashboard</span>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a class="link" href="./event-management.html">
+                    <a class="link" href="./event-management.php">
                         <span class="material-symbols-outlined"> event </span>
                         <span>Event Management</span>
                     </a>
                 </li>
                 <li>
-                    <a class="link" href="./registrations.html">
+                    <a class="link" href="./registrations.php">
                         <span class="material-symbols-outlined">how_to_reg</span>
                         <span>Registrations</span>
                     </a>
                 </li>
                 <li>
-                    <a class="link" href="./users.html">
+                    <a class="link" href="./users.php">
                         <span class="material-symbols-outlined">group</span>
                         <span>Users</span>
                     </a>
                 </li>
                 <li>
-                    <a class="link active" href="./setting.html">
+                    <a class="link active" href="./setting.php">
                         <span class="material-symbols-outlined">settings</span>
                         <span>System Setting</span>
                     </a>
