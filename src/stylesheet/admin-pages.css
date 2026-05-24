@@ -293,7 +293,7 @@ main .trend-cards .card .value {
     color: var(--color-text, #111);
     padding: 0.5rem 1.2rem;
     border-radius: 10rem;
-    background-color: var(--color-secondery);
+    background-color: var(--color-secondary, #ECC94B);
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.1rem;
@@ -322,7 +322,7 @@ main .trend-cards .card .value {
 }
 
 .highlited-events .main-event .info-label {
-    color: var(--color-secondery);
+    color: var(--color-secondary);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
