@@ -216,40 +216,32 @@ $recent_registrations = mysqli_fetch_all($recent_result, MYSQLI_ASSOC);
                             if ($reg['status'] === "Approved") $statusClass = "approved";
                             if ($reg['status'] === "Rejected") $statusClass = "rejected";
                             ?>
-                            <td>
-                                <div class="student-profile">
-                                    <img
-                                        src="${event.image}"
-                                        alt="${event.title}"
-                                        class="event-thumbnail" />
-                                    <div class="info-stack">
-                                        <span class="name">${event.title}</span>
-                                        <span class="sub-text">${event.location}</span>
+                            <tr>
+                                <td>
+                                    <div class="student-profile">
+                                        <img src="<?= $reg['avatar']; ?>" alt="<?= $reg['student_name']; ?>">
+                                        <div class="info-stack">
+                                            <span class="name"><?= $reg['student_name']; ?></span>
+                                            <span class="sub-text"><?= $reg['event_name']; ?></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="info-stack">
-                                    <span class="main-text">${formatedDate}</span>
-                                    <span class="sub-text">${event.startTime} - ${event.endTime}</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="info-stack">
-                                    <span class="main-text">${event.registered} / ${event.capacity}</span>
-                                    <span class="sub-text">${percent}% Full</span>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="status-badge ${statusClass}">${event.status}</span>
-                            </td>
-                            <td>
-                                <div class="action-buttons icon-only">
-                                    <span class="material-symbols-outlined action-icon edit-btn" data-id="${event.id}" title="Edit">edit</span>
-                                    <span class="material-symbols-outlined action-icon view-btn" data-id="${event.id}" title="View">visibility</span>
-                                    <span class="material-symbols-outlined action-icon delete-btn rejected" data-id="${event.id}" title="Delete">delete</span>
-                                </div>
-                            </td>
+                                </td>
+                                <td>
+                                    <div class="info-stack">
+                                        <span class="main-text"><?= $formatedDate; ?></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="status-badge <?= $statusClass; ?>">
+                                        <?= $reg['status']; ?>
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="action-buttons icon-only">
+                                        <span class="material-symbols-outlined action-icon approved" title="Approve">check</span>
+                                        <span class="material-symbols-outlined action-icon rejected" title="Reject">close</span>
+                                    </div>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
