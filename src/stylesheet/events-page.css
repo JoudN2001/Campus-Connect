@@ -1,7 +1,8 @@
+/* =========================================
+   HEADER STYLES
+========================================= */
 header {
   background-color: white;
-}
-header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -17,7 +18,7 @@ header ul {
   display: flex;
   gap: 20px;
 }
-header nav-links {
+header .nav-links {
   color: #2d3748;
 }
 header .nav-btns button {
@@ -34,37 +35,40 @@ header .nav-btns button a {
   text-decoration: none;
 }
 header span {
-  background-color: none;
+  background-color: transparent;
 }
-form {
-  display: flex;
-  background-color: var(--color-background);
-  gap: 15px;
-  margin: 20px;
-}
+
+/* =========================================
+   SEARCH & FILTERS
+========================================= */
 .search-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 140px;
-  background-color: var(--color-background);
+  background-color: var(--color-background, #f7fafc);
 }
-form input [type="search"] {
+form {
+  display: flex;
+  background-color: var(--color-background, #f7fafc);
+  gap: 15px;
+  margin: 20px;
+}
+form input[type="search"] {
   flex: 1;
   padding: 20px;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-primary, #1a365d);
   border-radius: 6px;
 }
 form button {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary, #1a365d);
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
 }
 form button:hover {
-  background-color: var(--color-primary);
   cursor: pointer;
 }
 .filter-buttons button {
@@ -81,19 +85,22 @@ form button:hover {
   color: #fff;
   cursor: pointer;
 }
+
+/* =========================================
+   ADVERTISING CARD
+========================================= */
 .advertising-card {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary, #1a365d);
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* push content to bottom */
+  justify-content: flex-end;
   padding: 20px;
   border-radius: 10px;
   width: 800px;
-  margin-left: 350px;
+  margin: 40px auto; /* Centers the card */
   align-items: center;
 }
-/* TODO: Add margin-top for the title class */
 .advertising-card .title {
   color: goldenrod;
   font-size: 16px;
@@ -112,7 +119,7 @@ form button:hover {
 }
 .advertising-card button {
   background-color: white;
-  color: var(--color-primary);
+  color: var(--color-primary, #1a365d);
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
@@ -120,15 +127,12 @@ form button:hover {
   margin-bottom: 10px;
 }
 .advertising-card button:hover {
-  background-color: white;
   cursor: pointer;
 }
-/* .events-cards {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding: 20px;
-} */
+
+/* =========================================
+   DYNAMIC EVENT CARDS (REPLACES .card-1, .card-2, etc.)
+========================================= */
 .events-cards .events-cards-header {
   display: flex;
   gap: 20px;
@@ -137,294 +141,113 @@ form button:hover {
   color: #1a365d;
   font-size: 16px;
 }
-/* .all-cards {
+
+/* Creates the 2-column layout that replaces your old .card-1-2 row wrapper */
+.all-cards {
   display: grid;
-  height: 600px;
-  width: 100%;
+  grid-template-columns: repeat(2, 600px);
+  justify-content: center;
   gap: 20px;
   padding: 20px;
   margin-top: 20px;
-} */
-.card-1 {
+}
+
+/* The unified card class that matches your original styling perfectly */
+.event-card {
   width: 600px;
   height: 600px;
   margin-top: 20px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-.card-1 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.card-1 ::before {
-  /* content: ""; */
-  position: absolute;
-  inset: 0;
-}
-.card-1 * {
-  position: relative; /* above the overlay */
-}
-.card-1-tag {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-.card-1-title {
-  font-size: 20px;
-  margin: 12px;
-  margin-left: 45px;
-}
-.card-1-description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 350;
-  margin-left: 5px;
-}
-.card-1-button {
-  background-color: #1a365d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.card-1-button:hover {
-  background-color: #1a365d;
-  cursor: pointer;
-}
-.card-2 {
-  width: 600px;
-  height: 600px;
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-.card-2 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.card-2-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-.card-2-title {
-  font-size: 20px;
-  margin: 12px 0;
-  margin-left: 45px;
-}
-.card-2-description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 350;
-  margin-left: 5px;
-}
-.card-2-button {
-  background-color: #1a365d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.card-2-button:hover {
-  background-color: #1a365d;
-  cursor: pointer;
-}
-.card-3 {
-  width: 600px;
-  height: 600px;
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-.card-3 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.card-3-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-.card-3-title {
-  font-size: 20px;
-  margin: 12px 0;
-  margin-left: 45px;
-}
-.card-3-description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 350;
-  margin-left: 5px;
-}
-.card-3-button {
-  background-color: #1a365d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.card-3-button:hover {
-  background-color: #1a365d;
-  cursor: pointer;
-}
-.card-4 {
-  width: 600px;
-  height: 600px;
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-.card-4 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.card-4-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-.card-4-title {
-  font-size: 20px;
-  margin: 12px 0;
-  margin-left: 45px;
-}
-.card-4-description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 350;
-  margin-left: 5px;
-}
-.card-4-button {
-  background-color: #1a365d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.card-4-button:hover {
-  background-color: #1a365d;
-  cursor: pointer;
-}
-.card-5 {
-  width: 600px;
-  height: 600px;
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-.card-5 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.card-5-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-.card-5-title {
-  font-size: 20px;
-  margin: 12px 0;
-  margin-left: 45px;
-}
-.card-5-description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 350;
-  margin-left: 5px;
-}
-.card-5-button {
-  background-color: #1a365d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.card-5-button:hover {
-  background-color: #1a365d;
-  cursor: pointer;
-}
-.card-6 {
-  width: 600px;
-  height: 600px;
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-.card-6 img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.card-6-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-.card-6-title {
-  font-size: 20px;
-  margin: 12px 0;
-  margin-left: 45px;
-}
-.card-6-description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 350;
-  margin-left: 5px;
-}
-.card-6-button {
-  background-color: #1a365d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.card-6-button:hover {
-  background-color: #1a365d;
-  cursor: pointer;
-}
-.card-1-2 {
+  background-color: white;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
 }
-.card-3-4 {
+
+.event-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.event-tag {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
+  align-self: flex-start; /* Keeps the tag tightly wrapped around the text */
+}
+
+.event-title {
+  font-size: 20px;
+  margin: 12px 0;
+  margin-left: 45px;
+  color: #1a365d;
+}
+
+.event-description {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-left: 5px;
+}
+
+.event-card a {
+  text-decoration: none;
+}
+
+.event-button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+  align-self: flex-start;
+}
+
+.event-button:hover {
+  cursor: pointer;
+  background-color: #2b4c7e;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer-container {
+  background-color: #f7fafc;
+  margin-top: 40px;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
 }
-.card-5-6 {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+
+.left-footer .logo {
+  color: var(--color-primary, #1a365d);
+  font-weight: 700;
+  font-size: 18px;
 }
+
+.left-footer .date {
+  color: var(--color-text-muted, #718096);
+  font-size: 13px;
+  margin-top: 5px;
+}
+.footer-container {
+  background-color: var(--color-bg-main);
+  border-top: 1px solid #e2e8f0;
+}
+
 footer {
   max-width: 1200px;
   margin: 0 auto;
@@ -444,4 +267,18 @@ footer {
   color: var(--color-text-muted);
   font-size: 13px;
   margin-top: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .name-email-group {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
