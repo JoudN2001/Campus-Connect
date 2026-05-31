@@ -1,4 +1,44 @@
 /* =========================================
+   HEADER / NAVIGATION STYLES
+========================================= */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header h1 {
+  color: #1a365d;
+}
+header h1 span {
+  color: #ecc94b;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header .nav-links {
+  color: #2d3748;
+}
+header .nav-btns button {
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+header .nav-btns button a {
+  color: white;
+  text-decoration: none;
+}
+header span {
+  background-color: transparent;
+}
+
+/* =========================================
    FIXED CONTACT PAGE STYLES
 ========================================= */
 
@@ -68,6 +108,11 @@ textarea {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   background: #f8fafc;
+}
+
+textarea {
+  resize: none;
+  height: 125px;
 }
 
 .submit-btn {
@@ -146,6 +191,15 @@ footer {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  header ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .contact-container {
     flex-direction: column;
   }

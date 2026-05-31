@@ -56,7 +56,7 @@ if (!empty($_GET['filter'])) {
       </nav>
 
       <div class="nav-btns">
-        <button><a href="./admin-page.php"> Sign In </a></button>
+        <button><a href="./admin/dashboard.php"> Sign In </a></button>
         <button>
           <a href="./admin-page.php">
             <span class="material-symbols-outlined"> account_circle </span>

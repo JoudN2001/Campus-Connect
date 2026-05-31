@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </ul>
       </nav>
       <div class="nav-btns">
-        <button><a href="./admin-page.php" style="color:white; text-decoration:none;">Sign In</a></button>
+        <button><a href="./admin/dashboard.php" style="color:white; text-decoration:none;">Sign In</a></button>
       </div>
     </header>
 
