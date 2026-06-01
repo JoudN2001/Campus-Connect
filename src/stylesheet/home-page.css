@@ -142,7 +142,7 @@ body {
     align-items: center;
     background: linear-gradient(to right, rgba(11, 28, 64, 0.95) 30%, rgba(11, 28, 64, 0.6)),
         url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-    padding-bottom: 80px; /* Leave space for overlapping cards */
+    /* padding-bottom removed as space for overlapping cards is no longer needed */
 }
 
 .hero-content {
@@ -178,6 +178,7 @@ body {
    ========================================================================== */
 .about {
     background-color: #f8fafc;
+    padding-top: 80px; /* Added to create space from the banner */
     padding-bottom: 80px;
 }
 
@@ -185,7 +186,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: -100px; /* Pulls cards up over the hero image */
+    margin-top: 0; /* Changed from -100px to keep cards below the banner */
     position: relative;
     z-index: 10;
 }
