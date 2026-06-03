@@ -157,7 +157,7 @@ Campus-Connect/
 
 This project was built collaboratively by our dedicated team:
 
-* **Joud N.**
+* **Joud Kayyali**
 * **Mamoun Momani**
 * **Ramiz Aboramadan**
 
